@@ -16,14 +16,14 @@ const Hero = () => {
                     <div id='hero' className="flex flex-col lg:flex-row py-8 justify-between text-center lg:text-left">
                         <div className="lg:w-1/2 flex flex-col justify-center" data-aos="zoom-in" data-aos-delay="200">
                             <h1 className="mb-5 md:text-5xl text-3xl font-bold text-blue-900">
-                                A payment experience like never before
+                                Streamline your Business payments with the Rotsi API
                             </h1>
                             <div className="text-xl font-semibold tracking-tight mb-5 text-gray-500">
-                                Quickly process your pay-ins, pay-outs, pay your bills. Schedule payments and split payments all from your device 
+                                Quickly process your pay-ins, pay-outs, pay your bills. Schedule payments and e-invoices and split payments all from our dashboard 
                             </div>
                             <div className="mb-4 space-x-0 md:space-x-2 md:mb-8">
                             <a
-                                href="https://dashboard.rotsi.co.ke"
+                                href="https://dashboard.rotsi.co.ke/register"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-2xl sm:w-auto sm:mb-0"
