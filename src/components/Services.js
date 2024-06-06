@@ -22,22 +22,22 @@ const Services = () => {
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                         <ServiceCard
                             videoUrl="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_1"
-                            title="Track Transactions"
-                            description="Effortlessly monitor all your transactions, including successful and failed ones. Gain valuable insights to shape your business strategy and receive instant periodic transaction reports."
+                            title="Elevate your Payments Experience"
+                            description="Epgrade your business, to be able to receive Payments using QRCode, Payment Prompts and Payment Links. Also pay out your suppliers, employees straight to their mobile phones and bak accounts."
                         />
                         <ServiceCard
                             videoUrl="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_2"
-                            title="Quick Bill Payments"
-                            description="Easily pay your bills, remit taxes, and make payments to customers, employees, and suppliers, directly to their mobile wallets or bank accounts with minimal transaction fees."
+                            title="Elevate your Customer Experience"
+                            description="Reach to your customers using our Mass marketing tools. Send many Bulk SMS with customised promotional messages to increase your brand awareness."
                         />
                         <ServiceCard
                             videoUrl="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_3"
-                            title="Schedule Payments & Invoices"
-                            description="Automate bulk and recurring payments with our scheduling feature. Send click-to-pay invoices to your customers in advance, along with reminders, simplifying your financial management."
+                            title="Elevate your receipt generation"
+                            description="Generate an ETR receipt, everytime you make a payment from your business, to help you while filing for taxation."
                         />
                         <ServiceCard
                             videoUrl="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_4"
-                            title="Rotsi Chatbot"
+                            title="Rotsi AI"
                             description="Leverage our AI-powered Chatbot to gain insights into your transactions and receive professional advice on your business trajectory, all at no cost to your business."
                         />
                     </div>

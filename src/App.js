@@ -30,7 +30,7 @@ function App() {
     });
   }, []);
 
-  useDocTitle("Rotsi Api Solutions");
+  useDocTitle("ROTSI API SOLUTIONS");
 
   return (
     <>
