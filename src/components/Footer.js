@@ -47,16 +47,16 @@ const Footer = () => {
                             <a href="https://dashboard.rotsi.co.ke" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Efficient Pay-ins</a>
                         </li>
                         <li className="mb-2">
-                            <a href='https://developers.rotsi.co.ke' className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Efficient Pay-ins</a>
+                            <a href='https://developer.rotsi.co.ke' className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Efficient Pay-ins</a>
                         </li>
                         <li className="mb-2">
-                            <a href='https://developers.rotsi.co.ke' className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Quick Bill payment</a>
+                            <a href='https://developer.rotsi.co.ke' className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Quick Bill payment</a>
                         </li>
                         <li className="mb-2">
-                            <a href='https://developers.rotsi.co.ke' className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Security-Assured Transactions</a>
+                            <a href='https://developer.rotsi.co.ke' className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Security-Assured Transactions</a>
                         </li>
                         <li className="mb-2">
-                            <a href='https://developers.rotsi.co.ke' className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Easy to integrate Developer API`S </a>
+                            <a href='https://developer.rotsi.co.ke' className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Easy to integrate Developer API`S </a>
                         </li>
                         {/* <li className="mb-2">
                             <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">E-Commerce Payments plugin</Link>
