@@ -13,10 +13,15 @@ const Intro = () => {
                         </div>
                         <div className="flex-col my-4 text-center lg:text-left lg:my-0 lg:justify-end w-full lg:w-1/2 px-8" data-aos="zoom-in" data-aos-delay="500">
                             
-                            <h6 className="text-2xl  text-blue-900 font-bold">Welcome to Rotsi, the forefront of digital banking innovation. Our state-of-the-art neobank platform delivers a comprehensive suite of financial,communication and Data analytics services designed for accessibility, security, and unparalleled convenience.</h6>
-                            <div>
-                                <p className='my-3 text-l text-gray-600 font-semibold'>Equipped with robust infrastructure, our platform empowers individuals and businesses alike to effortlessly facilitate money transfers, monitor transactions, execute payments, and send promotional SMS to their customers within a unified ecosystem.</p>
-                            </div>
+                        <h6 className="text-2xl text-blue-900 font-bold">
+                            Welcome to Rotsi, a pioneer in digital banking solutions. Our cutting-edge neobank platform offers a seamless blend of financial, communication, and data analytics services, built for ease, security, and unmatched convenience.
+                        </h6>
+                        <div>
+                            <p className="my-3 text-l text-gray-600 font-semibold">
+                                With a powerful infrastructure, Rotsi enables businesses manage money transfers, track transactions across different sources, process payments, and send targeted SMS campaigns—all within a single, integrated platform all while getting crucial Business intelligence to <b>boost your revenues</b>.
+                            </p>
+                        </div>
+
                             
                             {/* <div>
                                 <p className='my-3 text-l text-gray-600 font-semibold'>
@@ -25,7 +30,7 @@ const Intro = () => {
                                 </p>
                             </div> */}
                             <a href="https://dashboard.rotsi.co.ke/register" target="_blank" rel="noopener noreferrer" className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-2 my-4 text-lg shadow-xl rounded-2xl sm:w-auto sm:mb-0 group">
-                                Create a Rotsi Account today
+                                Create an Account with Rotsi today
                                 <svg className="w-4 h-4 ml-1 group-hover: translate-x-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
                             </a>
                         </div>

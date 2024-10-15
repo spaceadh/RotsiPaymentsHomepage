@@ -22,23 +22,23 @@ const Services = () => {
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
                         <ServiceCard
                             videoUrl="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_1"
-                            title="Elevate your Payments Experience"
-                            description="Epgrade your business, to be able to receive Payments using QRCode, Payment Prompts and Payment Links. Also pay out your suppliers, employees straight to their mobile phones and bak accounts."
+                            title="Streamline Your Payments"
+                            description="Effortlessly manage and reconcile payments from various tills, paybills, and other sources—whether online or in-store. Utilize our WooCommerce plugin for seamless online transactions, and offer secure payments at your physical business location."
                         />
                         <ServiceCard
                             videoUrl="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_2"
-                            title="Elevate your Customer Experience"
-                            description="Reach to your customers using our Mass marketing tools. Send many Bulk SMS with customised promotional messages to increase your brand awareness."
+                            title="Enhance Customer Engagement"
+                            description="Boost customer outreach with our Bulk SMS tool. Send personalized promotional messages to your clients and general large audiences, increasing brand visibility and driving engagement."
                         />
                         <ServiceCard
-                            videoUrl="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_3"
-                            title="Elevate your receipt generation"
-                            description="Generate an ETR receipt, everytime you make a payment from your business, to help you while filing for taxation."
+                            videoUrl="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_5"
+                            title="Permission-Based Access"
+                            description="Assign role-specific access to employees within your organization. Set permissions for receiving payments, processing pay-outs, to streamline operations and secure financial control."
                         />
                         <ServiceCard
-                            videoUrl="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_4"
-                            title="Rotsi AI"
-                            description="Leverage our AI-powered Chatbot to gain insights into your transactions and receive professional advice on your business trajectory, all at no cost to your business."
+                            videoUrl="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_6"
+                            title="Advanced Data Analytics"
+                            description="Leverage our data analytics solution to gain insights into your financial transactions. Use this data to boost decision-making, optimize operations, and access personalized loan-matching services."
                         />
                     </div>
                 </div>
@@ -51,7 +51,7 @@ const ServiceCard = ({ videoUrl, title, description }) => {
     return (
         <div className="bg-white transition-all ease-in-out duration-400 overflow-hidden text-gray-700 hover:bg-gray-500 hover:text-white rounded-lg shadow-2xl p-3 group">
             <div className="m-2 text-justify text-sm">
-                <ReactPlayer url={videoUrl} controls={true} width="100%" height="200px" />
+                {/* <ReactPlayer url={videoUrl} controls={true} width="100%" height="200px" /> */}
                 <h2 className="font-semibold my-4 text-2xl text-center">{title}</h2>
                 <p className="text-md font-medium">{description}</p>
             </div>

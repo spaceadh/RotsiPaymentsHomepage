@@ -19,7 +19,8 @@ const Hero = () => {
                                 ELEVATE YOUR BUSINESS EXPERIENCE WITH THE ROTSI API
                             </h1>
                             <div className="text-xl font-semibold tracking-tight mb-5 text-gray-500">
-                            Unlock New Revenue Opportunities By Managing YOUR Business's Payments, Communicating, And Data Insights Through Our API. 
+                                Businesses can now automatically reconcile payments from multiple sources in one unified dashboard, send bulk messages seamlessly, and gain actionable insights through our API.
+                                {/* Empower your business to unlock new revenue opportunities by managing payments, communication, and data insights—all through our API. */}
                             </div>
                             <div className="mb-4 space-x-0 md:space-x-2 md:mb-8">
                             <a
@@ -28,13 +29,11 @@ const Hero = () => {
                                 rel="noopener noreferrer"
                                 className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-2xl sm:w-auto sm:mb-0"
                                 >
-                                Sign up for as a Demo Client
+                                    Elevate your business experience Today !
                                 <svg className="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
                                 </svg>
                             </a>
-
-
                             </div>
                         </div>
                         <div className="flex lg:justify-end w-full lg:w-1/2" data-aos="fade-up" data-aos-delay="700">
