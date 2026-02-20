@@ -1,131 +1,119 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
 const Footer = () => {
+    const year = new Date().getFullYear();
+
     return (
-        <>
-            <footer>
-                <div className="footer max-w-full mx-auto px-4 sm:px-6 bg-gray-100 border-t border-b py-30">
-
-                    {/* Top area: Blocks */}
-                    <div className="grid sm:grid-cols-12 gap-5 py-8 md:py-12 border-t border-gray-200 lg:ml-11">
-
-                    {/* 1st block */}
-                    <div className="col-span-12 lg:col-span-4">
-                        <div className="box-border border-b-4 border-blue-900 p-8 bg-gray-200 text-gray-600 text-center rounded-lg xl:w-80 mx-auto">
-                            <h3 className="font-bold text-4xl mb-4">ROTSI</h3>
-                            <div className='text-md font-medium text-gray-600'>
-                                <h5>Narnayan Mombasa Road,Kenya</h5>
-                                <p>Phone : +254745474586</p>
-                                <p>Email : support@rotsi.co.ke</p>
-                            </div>
+        <footer className="bg-[#060610] border-t border-white/[0.05] pt-16 pb-8">
+            <div className="max-w-7xl mx-auto px-6 lg:px-16">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                    {/* Brand block */}
+                    <div className="md:col-span-2">
+                        <div className="flex items-center gap-2.5 mb-4">
+                            <span className="font-display font-bold text-2xl text-white">ROTSI</span>
+                            <span className="text-xs text-rotsi-gold uppercase tracking-widest">API Solutions</span>
+                        </div>
+                        <p className="text-gray-500 font-body text-sm leading-relaxed max-w-xs mb-6">
+                            A Bespoke Engineering &amp; Product House. We architect operational sovereignty for businesses at every scale.
+                        </p>
+                        {/* Social links */}
+                        <div className="flex gap-3">
+                            <a
+                                href="https://www.linkedin.com/company/rotsi-api"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-9 h-9 rounded border border-white/10 flex items-center justify-center text-gray-400 hover:border-rotsi-gold/40 hover:text-rotsi-gold transition-colors duration-200"
+                                aria-label="LinkedIn"
+                            >
+                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                            </a>
+                            <a
+                                href="https://www.facebook.com/ENLIGHTENEERING/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-9 h-9 rounded border border-white/10 flex items-center justify-center text-gray-400 hover:border-rotsi-gold/40 hover:text-rotsi-gold transition-colors duration-200"
+                                aria-label="Facebook"
+                            >
+                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg>
+                            </a>
                         </div>
                     </div>
 
-                    {/* 2nd block */}
-                    <div className="col-span-6 md:col-span-6 lg:col-span-1 ml-7 mx-auto">
-                        <h6 className="text-[#013289] text-xl font-bold mb-4">LINKS</h6>
-                        <ul className="text-md">
-                        <li className="mb-2">
-                            <HashLink to="#about" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">About</HashLink>
-                        </li>
-                        <li className="mb-2">
-                            <HashLink to="#services" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Services</HashLink>
-                        </li>
-                        <li className="mb-2">
-                            <HashLink to="/contact#contact" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Contact</HashLink>
-                        </li>                            
+                    {/* Services */}
+                    <div>
+                        <h4 className="font-display font-semibold text-white text-xs uppercase tracking-widest mb-5">Services</h4>
+                        <ul className="space-y-3">
+                            <li>
+                                <HashLink smooth to="/#about" className="text-gray-500 hover:text-rotsi-gold text-sm font-body transition-colors duration-200">
+                                    Bespoke Engineering
+                                </HashLink>
+                            </li>
+                            <li>
+                                <Link to="/ibiza" className="text-gray-500 hover:text-rotsi-gold text-sm font-body transition-colors duration-200">
+                                    Ibiza OS
+                                </Link>
+                            </li>
+                            <li>
+                                <HashLink smooth to="/#services" className="text-gray-500 hover:text-rotsi-gold text-sm font-body transition-colors duration-200">
+                                    Strategic Integration
+                                </HashLink>
+                            </li>
+                            <li>
+                                <a href="https://developer.rotsi.co.ke" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-rotsi-gold text-sm font-body transition-colors duration-200">
+                                    Developer Portal
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
-                    {/* 3rd block */}
-                    <div className="col-span-6 md:col-span-6 lg:col-span-4 mx-auto">
-                        <h6 className="text-[#013289] text-xl font-bold mb-4">OUR SERVICES</h6>
-                        <ul className="text-md">
-                        <li className="mb-2">
-                            <a href="https://dashboard.rotsi.co.ke" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Efficient Pay-ins</a>
-                        </li>
-                        <li className="mb-2">
-                            <a href='https://developer.rotsi.co.ke' className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Efficient Pay-ins</a>
-                        </li>
-                        <li className="mb-2">
-                            <a href='https://developer.rotsi.co.ke' className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Quick Bill payment</a>
-                        </li>
-                        <li className="mb-2">
-                            <a href='https://developer.rotsi.co.ke' className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Security-Assured Transactions</a>
-                        </li>
-                        <li className="mb-2">
-                            <a href='https://developer.rotsi.co.ke' className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">Easy to integrate Developer API`S </a>
-                        </li>
-                        {/* <li className="mb-2">
-                            <Link to="#" className="text-[#013289] hover:text-gray-900 hover:tracking-wider transition duration-250 ease-in-out">E-Commerce Payments plugin</Link>
-                        </li> */}
+                    {/* Company + Contact */}
+                    <div>
+                        <h4 className="font-display font-semibold text-white text-xs uppercase tracking-widest mb-5">Company</h4>
+                        <ul className="space-y-3 mb-8">
+                            <li>
+                                <HashLink smooth to="/#about" className="text-gray-500 hover:text-rotsi-gold text-sm font-body transition-colors duration-200">
+                                    About
+                                </HashLink>
+                            </li>
+                            <li>
+                                <Link to="/contact" className="text-gray-500 hover:text-rotsi-gold text-sm font-body transition-colors duration-200">
+                                    Contact Us
+                                </Link>
+                            </li>
+                            <li>
+                                <a href="https://dashboard.rotsi.co.ke" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-rotsi-gold text-sm font-body transition-colors duration-200">
+                                    Dashboard
+                                </a>
+                            </li>
                         </ul>
-                    </div>
 
-                    {/* <a
-                        href="https://dashboard.rotsi.co.ke"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center px-4 py-2 shadow-xl rounded-xl text-sm"
-                    >
-                        Download Application
-                    </a> */}
-
-                    {/* 4th block */}
-                    <div className="col-span-12 text-center mx-auto lg:col-span-3 font-bold uppercase text-blue-900">
-                        <div className="text-xl mb-6">
-                            Social Media Links.
+                        <h4 className="font-display font-semibold text-white text-xs uppercase tracking-widest mb-3">Contact</h4>
+                        <div className="space-y-1">
+                            <p className="text-gray-500 text-sm font-body">support@rotsi.co.ke</p>
+                            <p className="text-gray-500 text-sm font-body">+254 745 474 586</p>
+                            <p className="text-gray-500 text-sm font-body">Mombasa Road, Nairobi, Kenya</p>
                         </div>
-                        <div className="text-md font-medium mb-6">
-                            Follow us on social media.
-                        </div>
-                        <div className="mx-auto text-center mt-2">
-                            <ul className="flex justify-center mb-4 md:mb-0">
-                                {/* <li>
-                                    <Link to="#" className="flex justify-center items-center text-blue-900 hover:text-gray-500 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out" aria-label="Twitter">
-                                    <svg className="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M24 11.5c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4 0 1.6 1.1 2.9 2.6 3.2-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H8c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4c.7-.5 1.3-1.1 1.7-1.8z" />
-                                    </svg>
-                                    </Link>
-                                </li>
-                                <li className="ml-4">
-                                    <Link to="#" className="flex justify-center items-center text-blue-900 hover:text-gray-500 bg-white hover:bg-white-100 rounded-full shadow transition duration-150 ease-in-out" aria-label="Facebook">
-                                    <svg className="w-8 h-8 fill-current" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14.023 24L14 17h-3v-3h3v-2c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V14H21l-1 3h-2.72v7h-3.257z" />
-                                    </svg>
-                                    </Link>
-                                </li> */}
-                                <li className='ml-4'>
-                                    <a href="linkedin.com/company/rotsi-api" target="_blank" rel="noreferrer" className="rounded-full flex justify-center bg-white h-8 text-blue-900  w-8 mx-1 text-center pt-1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className='fill-current font-black hover:animate-pulse'><circle cx="4.983" cy="5.009" r="2.188"></circle><path d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66H9.237zm-6.142 0H6.87v12.139H3.095z"></path></svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>          
-
-                    </div>
-
-                    <div className="flex flex-wrap items-center md:justify-between justify-center mx-auto px-4">
-                <div className="w-full md:w-4/12 px-4 mx-auto text-center py-2">
-                    <div className="text-sm text-gray-200 font-semibold py-1">
-                    Copyright &copy; {new Date().getFullYear()}{"  "}
-                    <HashLink
-                        to="/"
-                        className=" hover:text-gray-900"
-                    >
-                        ROTSI API SOLUTIONS
-                    </HashLink>. All rights reserved.
                     </div>
                 </div>
-                </div>
 
+                {/* Bottom bar */}
+                <div className="border-t border-white/[0.05] pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+                    <p className="text-gray-600 text-sm font-body">
+                        &copy; {year} Rotsi API Solutions. All rights reserved.
+                    </p>
+                    <p className="text-gray-600 text-xs font-body tracking-wider uppercase">
+                        Bespoke Engineering &amp; Product House
+                    </p>
                 </div>
-                
-            </footer>
-        </>
-    )
-}
+            </div>
+        </footer>
+    );
+};
+
 export default Footer;

@@ -1,49 +1,85 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import NavBar from '../components/Navbar/NavBar';
-import heroImg from '../images/rotsi-page.png';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return (
         <>
-            <div className="hero" id='hero'>
-                <div>
-                    <NavBar />
+            <NavBar />
+            <div className="relative min-h-screen bg-rotsi-black flex items-center overflow-hidden">
+                {/* Ambient glow orbs */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                    <div className="absolute -top-48 -right-48 w-[500px] h-[500px] bg-rotsi-gold/[0.06] rounded-full blur-3xl"></div>
+                    <div className="absolute top-1/2 -left-48 w-80 h-80 bg-rotsi-gold/[0.04] rounded-full blur-3xl"></div>
+                    <div className="absolute bottom-0 right-1/3 w-64 h-64 bg-blue-900/20 rounded-full blur-3xl"></div>
                 </div>
-                
-                <div className="m-auto overflow-hidden mx-4 mt-8 lg:mt-4 p-2 md:p-12 h-5/6" data-aos="zoom-in">
 
-                    <div id='hero' className="flex flex-col lg:flex-row py-8 justify-between text-center lg:text-left">
-                        <div className="lg:w-1/2 flex flex-col justify-center" data-aos="zoom-in" data-aos-delay="200">
-                            <h1 className="mb-5 md:text-5xl text-3xl font-bold text-blue-900">
-                                ELEVATE YOUR BUSINESS EXPERIENCE WITH THE ROTSI API
-                            </h1>
-                            <div className="text-xl font-semibold tracking-tight mb-5 text-gray-500">
-                                Businesses can now automatically reconcile payments from multiple sources in one unified dashboard, send bulk messages seamlessly, and gain actionable insights through our API.
-                                {/* Empower your business to unlock new revenue opportunities by managing payments, communication, and data insights—all through our API. */}
-                            </div>
-                            <div className="mb-4 space-x-0 md:space-x-2 md:mb-8">
-                            <a
-                                href="https://dashboard.rotsi.co.ke/register"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-white bg-blue-900 hover:bg-blue-800 inline-flex items-center justify-center w-full px-6 py-3 my-4 text-lg shadow-xl rounded-2xl sm:w-auto sm:mb-0"
-                                >
-                                    Elevate your business experience Today !
-                                <svg className="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
-                                </svg>
-                            </a>
-                            </div>
+                {/* Subtle grid overlay */}
+                <div className="absolute inset-0 opacity-[0.025] grid-bg pointer-events-none"></div>
+
+                <div className="relative max-w-7xl mx-auto px-6 lg:px-16 pt-36 pb-24 w-full">
+                    <div className="max-w-4xl">
+                        {/* Tag pill */}
+                        <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-rotsi-gold/30 bg-rotsi-gold/10 mb-8">
+                            <span className="w-2 h-2 rounded-full bg-rotsi-gold animate-pulse"></span>
+                            <span className="text-rotsi-gold text-xs font-body font-semibold uppercase tracking-widest">
+                                Bespoke Engineering &amp; Product House
+                            </span>
                         </div>
-                        <div className="flex lg:justify-end w-full lg:w-1/2" data-aos="fade-up" data-aos-delay="700">
-                            <img alt="card img" className="rounded-t float-right duration-1000 w-full" src={heroImg} />
+
+                        {/* Headline */}
+                        <h1 className="font-display font-bold text-5xl lg:text-7xl text-white leading-[1.05] tracking-tight mb-6">
+                            We Architect{' '}
+                            <span className="gold-text">Operational</span>
+                            <br />
+                            <span className="gold-text">Sovereignty.</span>
+                        </h1>
+
+                        {/* Subheadline */}
+                        <p className="text-gray-400 text-lg lg:text-xl font-body leading-relaxed max-w-2xl mb-10">
+                            We don't just build apps — we replace friction with custom-built digital intelligence.
+                            From Tier-1 enterprise engineering to flagship products and 1,000+ merchant networks.
+                        </p>
+
+                        {/* Dual CTA */}
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <Link
+                                to="/contact"
+                                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-rotsi-gold text-rotsi-black font-display font-bold text-base rounded hover:bg-rotsi-gold-light transition-all duration-200 group"
+                            >
+                                Book a Consultation
+                                <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </Link>
+                            <Link
+                                to="/ibiza"
+                                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-white border border-white/20 font-display font-semibold text-base rounded hover:border-rotsi-gold/50 hover:text-rotsi-gold transition-all duration-200"
+                            >
+                                Explore Ibiza OS
+                            </Link>
+                        </div>
+
+                        {/* Stats row */}
+                        <div className="flex flex-wrap gap-10 mt-16 pt-8 border-t border-white/[0.06]">
+                            <div>
+                                <div className="font-display font-bold text-3xl text-white">1,000+</div>
+                                <div className="text-gray-500 text-sm font-body mt-1">Merchants Digitized</div>
+                            </div>
+                            <div>
+                                <div className="font-display font-bold text-3xl text-white">Tier-1</div>
+                                <div className="text-gray-500 text-sm font-body mt-1">Institution Partners</div>
+                            </div>
+                            <div>
+                                <div className="font-display font-bold text-3xl text-white">3</div>
+                                <div className="text-gray-500 text-sm font-body mt-1">Modernization Umbrellas</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
 
 export default Hero;
