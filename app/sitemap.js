@@ -1,4 +1,4 @@
-import { SITE_URL } from '../src/lib/seo';
+﻿import { SITE_URL } from '../src/lib/seo';
 
 export default function sitemap() {
   const now = new Date();
@@ -30,3 +30,4 @@ export default function sitemap() {
     },
   ];
 }
+

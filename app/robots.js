@@ -1,4 +1,4 @@
-import { SITE_URL } from '../src/lib/seo';
+﻿import { SITE_URL } from '../src/lib/seo';
 
 export default function robots() {
   return {
@@ -7,3 +7,4 @@ export default function robots() {
     host: SITE_URL,
   };
 }
+
