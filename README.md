@@ -1,9 +1,13 @@
-### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### This project now runs on [Next.js](https://nextjs.org/)
 
-## How to use it
+## Local development
 
-To use this template:
-1. Clone the repository to your local machine, 
-2. run `npm install` to install all the required dependencies and
-3. run `npm start` to view the website locally.
-Feel free to edit and make changes. 
+1. Clone the repository to your local machine.
+2. Run `npm install` to install dependencies.
+3. Run `npm run dev` to start development.
+4. Open `http://localhost:3000`.
+
+## Production build
+
+1. Run `npm run build`.
+2. Run `npm run start`.

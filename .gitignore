@@ -12,6 +12,8 @@ build.zip
 
 # production
 /build
+/.next
+/.vercel
 
 # misc
 .DS_Store

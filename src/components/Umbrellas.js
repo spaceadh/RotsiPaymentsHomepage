@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const umbrellas = [
     {
@@ -105,7 +105,7 @@ const Umbrellas = () => {
                                             </p>
                                         </div>
                                         <Link
-                                            to={umbrella.ctaLink}
+                                            href={umbrella.ctaLink}
                                             className="shrink-0 self-start inline-flex items-center gap-2 px-6 py-3 border border-rotsi-gold/30 text-rotsi-gold font-body font-semibold text-sm rounded hover:bg-rotsi-gold hover:text-rotsi-black transition-all duration-200 group/btn"
                                         >
                                             {umbrella.cta}

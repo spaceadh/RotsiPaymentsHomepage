@@ -1,9 +1,11 @@
+ 'use client';
+
 import React, { useState, useEffect } from 'react';
 import NavLinks from '../Navbar/NavLinks';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const NavBar = () => {
-    const [top, setTop] = useState(!window.scrollY);
+    const [top, setTop] = useState(true);
     const [isOpen, setIsOpen] = useState(false);
 
     function handleClick() {
@@ -14,9 +16,10 @@ const NavBar = () => {
         const scrollHandler = () => {
             window.pageYOffset > 10 ? setTop(false) : setTop(true);
         };
+        scrollHandler();
         window.addEventListener('scroll', scrollHandler);
         return () => window.removeEventListener('scroll', scrollHandler);
-    }, [top]);
+    }, []);
 
     return (
         <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -26,7 +29,7 @@ const NavBar = () => {
         }`}>
             <div className="flex flex-row justify-between items-center py-4 px-6 lg:px-16 max-w-7xl mx-auto">
                 {/* Logo */}
-                <Link to="/" className="flex items-center gap-2.5">
+                <Link href="/" className="flex items-center gap-2.5">
                     <span className="font-display font-bold text-2xl tracking-tight text-white">ROTSI</span>
                     <span className="text-xs font-body text-rotsi-gold uppercase tracking-widest hidden sm:block">
                         API Solutions

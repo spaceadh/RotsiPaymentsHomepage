@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const features = [
     { label: 'WhatsApp Sales Automation', icon: '💬' },
@@ -53,7 +53,7 @@ const IbizaTeaser = () => {
                         </div>
 
                         <Link
-                            to="/ibiza"
+                            href="/ibiza"
                             className="inline-flex items-center gap-2 px-8 py-4 bg-rotsi-gold text-rotsi-black font-display font-bold text-base rounded hover:bg-rotsi-gold-light transition-all duration-200 group"
                         >
                             Explore Ibiza OS

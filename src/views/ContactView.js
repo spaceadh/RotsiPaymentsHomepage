@@ -1,7 +1,8 @@
+'use client';
+
 import React, { useState } from 'react';
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
-import { useDocTitle } from '../components/CustomHook';
 import axios from 'axios';
 import Notiflix from 'notiflix';
 
@@ -9,7 +10,6 @@ const inputClass =
     'w-full bg-white/[0.05] border border-white/10 text-white placeholder-gray-500 mt-2 p-3 rounded-lg focus:outline-none focus:border-rotsi-gold/50 transition-colors duration-200 font-body text-sm';
 
 const Contact = () => {
-    useDocTitle('Contact Us | Rotsi API Solutions');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
@@ -40,7 +40,7 @@ const Contact = () => {
 
         axios({
             method: 'post',
-            url: process.env.REACT_APP_CONTACT_API,
+            url: process.env.NEXT_PUBLIC_CONTACT_API || process.env.REACT_APP_CONTACT_API,
             data: fData,
             headers: { 'Content-Type': 'multipart/form-data' },
         })

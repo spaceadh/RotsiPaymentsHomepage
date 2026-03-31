@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
+import Link from 'next/link';
 
 const Footer = () => {
     const year = new Date().getFullYear();
@@ -50,19 +49,19 @@ const Footer = () => {
                         <h4 className="font-display font-semibold text-white text-xs uppercase tracking-widest mb-5">Services</h4>
                         <ul className="space-y-3">
                             <li>
-                                <HashLink smooth to="/#about" className="text-gray-500 hover:text-rotsi-gold text-sm font-body transition-colors duration-200">
+                                <a href="/#about" className="text-gray-500 hover:text-rotsi-gold text-sm font-body transition-colors duration-200">
                                     Bespoke Engineering
-                                </HashLink>
+                                </a>
                             </li>
                             <li>
-                                <Link to="/ibiza" className="text-gray-500 hover:text-rotsi-gold text-sm font-body transition-colors duration-200">
+                                <Link href="/ibiza" className="text-gray-500 hover:text-rotsi-gold text-sm font-body transition-colors duration-200">
                                     Ibiza OS
                                 </Link>
                             </li>
                             <li>
-                                <HashLink smooth to="/#services" className="text-gray-500 hover:text-rotsi-gold text-sm font-body transition-colors duration-200">
+                                <a href="/#services" className="text-gray-500 hover:text-rotsi-gold text-sm font-body transition-colors duration-200">
                                     Strategic Integration
-                                </HashLink>
+                                </a>
                             </li>
                             <li>
                                 <a href="https://developer.rotsi.co.ke" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-rotsi-gold text-sm font-body transition-colors duration-200">
@@ -77,12 +76,12 @@ const Footer = () => {
                         <h4 className="font-display font-semibold text-white text-xs uppercase tracking-widest mb-5">Company</h4>
                         <ul className="space-y-3 mb-8">
                             <li>
-                                <HashLink smooth to="/#about" className="text-gray-500 hover:text-rotsi-gold text-sm font-body transition-colors duration-200">
+                                <a href="/#about" className="text-gray-500 hover:text-rotsi-gold text-sm font-body transition-colors duration-200">
                                     About
-                                </HashLink>
+                                </a>
                             </li>
                             <li>
-                                <Link to="/contact" className="text-gray-500 hover:text-rotsi-gold text-sm font-body transition-colors duration-200">
+                                <Link href="/contact" className="text-gray-500 hover:text-rotsi-gold text-sm font-body transition-colors duration-200">
                                     Contact Us
                                 </Link>
                             </li>

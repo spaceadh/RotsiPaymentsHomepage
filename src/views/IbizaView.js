@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
-import { Link } from 'react-router-dom';
-import { useDocTitle } from '../components/CustomHook';
+import Link from 'next/link';
 
 const features = [
     {
@@ -88,12 +87,6 @@ const features = [
 ];
 
 const Ibiza = () => {
-    useDocTitle('Ibiza OS | Rotsi API Solutions');
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
     return (
         <div className="bg-rotsi-black min-h-screen">
             <NavBar />
@@ -127,7 +120,7 @@ const Ibiza = () => {
 
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Link
-                                to="/get-demo"
+                                href="/get-demo"
                                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-rotsi-gold text-rotsi-black font-display font-bold text-base rounded hover:bg-rotsi-gold-light transition-all duration-200 group"
                             >
                                 Request a Demo
@@ -257,7 +250,7 @@ const Ibiza = () => {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link
-                            to="/get-demo"
+                            href="/get-demo"
                             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-rotsi-gold text-rotsi-black font-display font-bold text-base rounded hover:bg-rotsi-gold-light transition-all duration-200 group"
                         >
                             Request a Demo
@@ -266,7 +259,7 @@ const Ibiza = () => {
                             </svg>
                         </Link>
                         <Link
-                            to="/contact"
+                            href="/contact"
                             className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/10 text-white font-display font-semibold text-base rounded hover:border-rotsi-gold/30 hover:text-rotsi-gold transition-all duration-200"
                         >
                             Contact Us

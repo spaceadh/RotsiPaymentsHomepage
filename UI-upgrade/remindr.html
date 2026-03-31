@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>REMINDR | FLOW-STATE SYSTEMS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed": "#191c1d",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#cca830",
+                        "primary-fixed": "#dbe2f9",
+                        "inverse-on-surface": "#f0f1f2",
+                        "tertiary": "#735c00",
+                        "surface-bright": "#f8f9fa",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "secondary-fixed-dim": "#c5c7c8",
+                        "surface-tint": "#565e71",
+                        "primary": "#000000",
+                        "surface-container": "#edeeef",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#7c8498",
+                        "inverse-surface": "#2e3132",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#45474c",
+                        "surface": "#f8f9fa",
+                        "on-secondary": "#ffffff",
+                        "outline": "#76777d",
+                        "surface-dim": "#d9dadb",
+                        "secondary-fixed": "#e1e3e4",
+                        "on-primary-fixed-variant": "#3f4759",
+                        "secondary": "#5c5f60",
+                        "on-surface": "#191c1d",
+                        "on-tertiary-container": "#4f3e00",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#454748",
+                        "on-primary-fixed": "#141b2c",
+                        "on-secondary-container": "#626566",
+                        "on-tertiary-fixed": "#241a00",
+                        "background": "#f8f9fa",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#e1e3e4",
+                        "surface-container-highest": "#e1e3e4",
+                        "primary-container": "#141b2c",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#bfc6dc",
+                        "outline-variant": "#c6c6cd",
+                        "on-background": "#191c1d",
+                        "tertiary-fixed": "#ffe088",
+                        "inverse-primary": "#bfc6dc",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-variant": "#e1e3e4"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f8f9fa;
+            color: #101828;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#f8f9fa] dark:bg-slate-950 transition-opacity duration-300">
+<div class="flex justify-between items-center w-full px-12 py-8 mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#101828] dark:text-slate-100 cursor-pointer hover:opacity-70 transition-opacity duration-300 active:scale-95" data-icon="grid_view">grid_view</span>
+<span class="text-2xl font-bold tracking-[-0.02em] text-[#101828] dark:text-white font-['Space_Grotesk'] tracking-tighter uppercase">ROTSI</span>
+</div>
+<div class="flex items-center gap-8">
+<span class="text-[#D4AF37] material-symbols-outlined" data-icon="close" data-weight="fill" style="font-variation-settings: 'FILL' 1;">close</span>
+</div>
+</div>
+</header>
+<main class="pt-32">
+<!-- Section 1: Hero -->
+<section class="min-h-[795px] flex flex-col items-center justify-center px-12 text-center bg-surface relative overflow-hidden">
+<!-- Background Motif -->
+<div class="absolute inset-0 flex items-center justify-center opacity-[0.02] pointer-events-none select-none">
+<span class="text-[60rem] font-headline text-tertiary leading-none">X</span>
+</div>
+<div class="relative z-10 max-w-5xl">
+<p class="text-tertiary font-label uppercase tracking-[0.4em] mb-8 text-sm">FLOW-STATE SYSTEMS</p>
+<h1 class="font-headline text-6xl md:text-8xl font-bold tracking-[-0.04em] text-primary mb-12 uppercase leading-none">
+                    REMINDR:<br/>THE COGNITIVE LEVER
+                </h1>
+<p class="font-body text-xl md:text-2xl text-secondary max-w-2xl mx-auto leading-relaxed tracking-tight">
+                    OPTIMIZING FLOW FOR ELITE PERFORMANCE.
+                </p>
+</div>
+</section>
+<!-- Section 2: The Challenge -->
+<section class="py-48 px-12 bg-surface-container-low flex flex-center items-center justify-center">
+<div class="max-w-3xl text-center">
+<span class="text-tertiary font-label text-xs tracking-[0.5em] uppercase mb-12 block">Philosophy</span>
+<h2 class="font-headline text-4xl md:text-5xl font-medium text-primary mb-12 tracking-tight">
+                    CONQUERING THE FRICTION OF MODERN DISTRACTION.
+                </h2>
+<div class="h-px w-24 bg-outline-variant/30 mx-auto mb-12"></div>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed">
+                    Human potential is tethered by the noise of the digital landscape. Remindr isn't a tool for management; it is an architectural intervention. By isolating the signal from the noise, we create a sanctuary for deep work.
+                </p>
+</div>
+</section>
+<!-- Section 3: Visual & Metrics Bento Grid -->
+<section class="py-48 px-12 bg-surface max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<!-- Metrics Column -->
+<div class="md:col-span-5 flex flex-col justify-between gap-12">
+<div class="bg-surface-container-highest p-12 flex flex-col justify-end min-h-[300px]">
+<p class="text-5xl font-headline font-bold text-primary mb-4 tracking-tighter">85%</p>
+<p class="text-tertiary font-label uppercase tracking-widest text-xs">DEEP WORK INCREASE</p>
+</div>
+<div class="bg-primary-container p-12 flex flex-col justify-end min-h-[300px]">
+<p class="text-5xl font-headline font-bold text-surface mb-4 tracking-tighter">2.5X</p>
+<p class="text-tertiary font-label uppercase tracking-widest text-xs">COGNITIVE OUTPUT</p>
+</div>
+<div class="bg-surface-container-low p-12 flex flex-col justify-end min-h-[300px]">
+<p class="text-5xl font-headline font-bold text-primary mb-4 tracking-tighter">&lt; 3MS</p>
+<p class="text-tertiary font-label uppercase tracking-widest text-xs">RESPONSE LATENCY</p>
+</div>
+</div>
+<!-- Visual Mockup Column -->
+<div class="md:col-span-7 bg-surface-container-low flex items-center justify-center overflow-hidden relative group">
+<div class="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
+<!-- App Mockup Container -->
+<div class="relative z-10 w-[320px] h-[640px] bg-white shadow-[0_40px_100px_rgba(16,24,40,0.08)] border-[12px] border-primary-container p-8 flex flex-col gap-8">
+<div class="flex justify-between items-center">
+<span class="text-xs font-bold tracking-tighter">REMINDR</span>
+<span class="material-symbols-outlined text-xs" data-icon="battery_full">battery_full</span>
+</div>
+<div class="mt-12 text-center">
+<span class="text-[0.6rem] font-label text-tertiary uppercase tracking-[0.3em]">Status</span>
+<h3 class="font-headline text-3xl font-bold mt-2 uppercase">Concentration</h3>
+</div>
+<div class="flex-grow flex items-center justify-center">
+<div class="w-48 h-48 border border-outline-variant/20 rounded-full flex items-center justify-center relative">
+<div class="w-32 h-32 border-2 border-tertiary rounded-full animate-pulse"></div>
+<span class="absolute text-primary font-headline text-xl font-bold tracking-tighter">ACTIVE</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="h-px bg-outline-variant/20 w-full"></div>
+<div class="flex justify-between text-[0.65rem] uppercase font-bold tracking-widest">
+<span>Input Neutralized</span>
+<span class="text-tertiary">98.2%</span>
+</div>
+</div>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-tertiary/5 rotate-45"></div>
+</div>
+</div>
+</section>
+<!-- Section 4: Project Specs -->
+<section class="py-48 px-12 bg-primary-container text-surface">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-24">
+<div class="max-w-md">
+<h2 class="font-headline text-5xl font-bold uppercase tracking-tighter mb-8 leading-none">Project<br/>Architecture</h2>
+<p class="text-on-primary-container/80 font-body leading-relaxed">
+                        A decentralized ledger designed to capture micro-flows and translate neural patterns into actionable systems.
+                    </p>
+</div>
+<div class="flex flex-col gap-12 flex-grow max-w-xl">
+<div class="flex justify-between items-end border-b border-surface/10 pb-6">
+<span class="text-tertiary font-label text-xs tracking-widest uppercase">Architecture</span>
+<span class="font-headline text-xl uppercase tracking-tight">Micro-flow Ledger</span>
+</div>
+<div class="flex justify-between items-end border-b border-surface/10 pb-6">
+<span class="text-tertiary font-label text-xs tracking-widest uppercase">Stack</span>
+<span class="font-headline text-xl uppercase tracking-tight">Rust, WebAssembly, Neural API</span>
+</div>
+<div class="flex justify-between items-end border-b border-surface/10 pb-6">
+<span class="text-tertiary font-label text-xs tracking-widest uppercase">Status</span>
+<span class="font-headline text-xl uppercase tracking-tight">Active Deployment</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: CTA -->
+<section class="py-64 px-12 text-center bg-surface">
+<div class="max-w-2xl mx-auto">
+<span class="material-symbols-outlined text-tertiary text-6xl mb-12 block" data-icon="psychology">psychology</span>
+<h3 class="font-headline text-5xl font-bold text-primary mb-12 uppercase tracking-tighter">Ready to Ascend?</h3>
+<button class="bg-primary text-surface px-16 py-6 font-headline font-bold uppercase tracking-widest hover:bg-primary-container transition-all duration-300 active:scale-95 group flex items-center gap-4 mx-auto">
+                    ENTER FLOW
+                    <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-12 py-24 flex flex-col items-center gap-8 bg-[#f8f9fa] dark:bg-slate-950 border-t border-[#c6c6cd]/10">
+<div class="flex gap-12 mb-8">
+<a class="font-['Manrope'] text-sm tracking-widest uppercase text-[#101828]/60 hover:text-[#D4AF37] transition-colors duration-300 Hover: underline-offset-4 underline" href="#">Philosophy</a>
+<a class="font-['Manrope'] text-sm tracking-widest uppercase text-[#101828]/60 hover:text-[#D4AF37] transition-colors duration-300 Hover: underline-offset-4 underline" href="#">Systems</a>
+<a class="font-['Manrope'] text-sm tracking-widest uppercase text-[#101828]/60 hover:text-[#D4AF37] transition-colors duration-300 Hover: underline-offset-4 underline" href="#">Archive</a>
+<a class="font-['Manrope'] text-sm tracking-widest uppercase text-[#101828]/60 hover:text-[#D4AF37] transition-colors duration-300 Hover: underline-offset-4 underline" href="#">Contact</a>
+</div>
+<div class="text-[#D4AF37] font-bold text-xl tracking-tighter uppercase font-headline">ROTSI</div>
+<p class="font-['Manrope'] text-sm tracking-widest uppercase text-[#101828] dark:text-slate-100 opacity-40">
+            © 2026 ROTSI SOLUTIONS. REMINDR FLOW-STATE SYSTEM.
+        </p>
+</footer>
+</body></html>

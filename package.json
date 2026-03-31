@@ -1,8 +1,8 @@
 {
-  "name": "mld",
+  "name": "rotsi-homepage",
   "version": "0.1.0",
+  "author": "alvinWachira",
   "private": true,
-  "homepage": "https://rotsi.co.ke/",
   "keywords": [
     "STK",
     "PUSH",
@@ -18,36 +18,21 @@
     "SCHEDULED",
     "PAYMENTS"
   ],
-  "author": "alvinwachira",
   "license": "MIT",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
+    "@emailjs/browser": "^4.4.1",
     "aos": "^3.0.0-beta.6",
     "axios": "^0.24.0",
-    "emailjs-com": "^3.2.0",
+    "next": "^15.0.0",
     "notiflix": "^3.2.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-player": "^2.16.0",
-    "react-router-dom": "^6.2.1",
-    "react-router-hash-link": "^2.4.3",
-    "react-scripts": "5.0.0",
-    "react-transition-group": "^4.4.2",
-    "web-vitals": "^2.1.2"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "browserslist": {
     "production": [

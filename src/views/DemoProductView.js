@@ -1,7 +1,8 @@
+'use client';
+
 import React, { useState } from 'react';
 import NavBar from '../components/Navbar/NavBar';
 import Footer from '../components/Footer';
-import { useDocTitle } from '../components/CustomHook';
 import axios from 'axios';
 import Notiflix from 'notiflix';
 
@@ -16,8 +17,6 @@ const demoOptions = [
 ];
 
 const DemoProduct = () => {
-    useDocTitle('Request a Demo | Rotsi API Solutions');
-
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
@@ -61,7 +60,7 @@ const DemoProduct = () => {
 
         axios({
             method: 'post',
-            url: process.env.REACT_APP_DEMO_REQUEST_API,
+            url: process.env.NEXT_PUBLIC_DEMO_REQUEST_API || process.env.REACT_APP_DEMO_REQUEST_API,
             data: fData,
             headers: { 'Content-Type': 'multipart/form-data' },
         })

@@ -1,6 +1,5 @@
 import React from 'react';
-import { HashLink } from 'react-router-hash-link';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const NavLinks = ({ mobile, onClick }) => {
     const linkClass = mobile
@@ -9,13 +8,13 @@ const NavLinks = ({ mobile, onClick }) => {
 
     return (
         <>
-            <HashLink className={linkClass} smooth to="/#about" onClick={onClick}>
+            <a className={linkClass} href="/#about" onClick={onClick}>
                 About
-            </HashLink>
-            <HashLink className={linkClass} smooth to="/#services" onClick={onClick}>
+            </a>
+            <a className={linkClass} href="/#services" onClick={onClick}>
                 Services
-            </HashLink>
-            <Link className={linkClass} to="/ibiza" onClick={onClick}>
+            </a>
+            <Link className={linkClass} href="/ibiza" onClick={onClick}>
                 Ibiza OS
             </Link>
             <a
@@ -27,7 +26,7 @@ const NavLinks = ({ mobile, onClick }) => {
             >
                 Developer Portal
             </a>
-            <Link className={linkClass} to="/contact" onClick={onClick}>
+            <Link className={linkClass} href="/contact" onClick={onClick}>
                 Contact
             </Link>
             <a

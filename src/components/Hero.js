@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from '../components/Navbar/NavBar';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const Hero = () => {
     return (
@@ -44,7 +44,7 @@ const Hero = () => {
                         {/* Dual CTA */}
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Link
-                                to="/contact"
+                                href="/contact"
                                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-rotsi-gold text-rotsi-black font-display font-bold text-base rounded hover:bg-rotsi-gold-light transition-all duration-200 group"
                             >
                                 Book a Consultation
@@ -53,7 +53,7 @@ const Hero = () => {
                                 </svg>
                             </Link>
                             <Link
-                                to="/ibiza"
+                                href="/ibiza"
                                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-white border border-white/20 font-display font-semibold text-base rounded hover:border-rotsi-gold/50 hover:text-rotsi-gold transition-all duration-200"
                             >
                                 Explore Ibiza OS
