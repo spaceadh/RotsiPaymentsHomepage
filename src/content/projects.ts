@@ -348,13 +348,13 @@ export const projects: ProjectEntry[] = [
     heroIntro:
       'Somafix Kenya needed a public-facing website that would do two jobs well: present the brand professionally and make product information easier to find, trust, and use.',
     image: {
-      src: '/clients-work/somafix/site-overview.svg',
+      src: '/clients-work/somfix/landing-page.png',
       alt: 'Somafix Kenya website overview graphic',
       dataAlt:
         'clean website case study graphic showing product visibility, search performance, and mobile and desktop quality scores',
     },
     secondaryAsset: {
-      src: '/clients-work/somafix/site-overview.svg',
+      src: '/clients-work/somfix/landing-page.png',
       alt: 'Somafix Kenya performance and SEO graphic',
     },
     challenge: [
