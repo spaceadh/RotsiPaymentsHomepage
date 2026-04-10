@@ -1,14 +1,16 @@
 export const SITE_URL = 'https://rotsi.co.ke';
-export const SITE_NAME = 'Rotsi API Solutions';
-export const DEFAULT_OG_IMAGE = '/favicon.png';
+export const SITE_NAME = 'Rotsi';
+export const DEFAULT_OG_IMAGE = '/brand/rotsi-wordmark-primary.svg';
+export const DEFAULT_SITE_ICON = '/brand/rotsi-monogram-primary.svg';
 
 export const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: SITE_NAME,
   url: SITE_URL,
-  logo: `${SITE_URL}/favicon.png`,
-  email: 'support@rotsi.co.ke',
+  logo: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
+  image: `${SITE_URL}${DEFAULT_OG_IMAGE}`,
+  email: 'business@rotsi.co.ke',
   telephone: '+254745474586',
   address: {
     '@type': 'PostalAddress',

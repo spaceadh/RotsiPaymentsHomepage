@@ -23,6 +23,18 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
+      url: `${SITE_URL}/work`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${SITE_URL}/blog`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${SITE_URL}/get-demo`,
       lastModified: now,
       changeFrequency: 'monthly',

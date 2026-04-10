@@ -2,6 +2,9 @@
 import Link from 'next/link';
 import Layout from '../../src/components/site/Layout';
 import MotionReveal from '../../src/components/site/MotionReveal';
+import RotsiLogo from '../../src/components/brand/RotsiLogo';
+import SiteMobileMenu from '../../src/components/site/SiteMobileMenu';
+import { mainNavigationItems } from '../../src/content/navigation';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -9,25 +12,39 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const mobileNavigationItems = mainNavigationItems('/contact');
+
   return (
     <Layout>
-      <header className="fixed top-0 z-50 w-full bg-white/60 backdrop-blur-xl shadow-[0_20px_50px_rgba(16,24,40,0.04)]">
+      <header className="fixed top-0 z-50 w-full border-b border-black/5 bg-background/78 backdrop-blur-2xl shadow-[0_20px_50px_rgba(15,23,42,0.04)]">
         <div className="mx-auto flex max-w-[1440px] items-center justify-between px-8 py-6 md:px-12">
-          <Link href="/" className="font-headline text-xl font-bold uppercase tracking-tighter text-yellow-600">
-            ROTSI SOLUTIONS
+          <Link href="/" className="inline-flex w-[132px] text-primary sm:w-[152px]" aria-label="Rotsi home">
+            <RotsiLogo className="block w-full" kind="wordmark" title="Rotsi wordmark" />
           </Link>
-          <nav className="hidden space-x-12 md:flex">
-            <Link className="font-headline font-medium uppercase tracking-tighter text-slate-600 transition-colors duration-300 hover:text-yellow-600" href="/blog">
+          <nav className="hidden items-center gap-12 md:flex">
+            <Link className="nav-link" href="/#services">
+              Services
+            </Link>
+            <Link className="nav-link" href="/work">
+              Work
+            </Link>
+            <Link className="nav-link" href="/blog">
               Journal
             </Link>
-            <Link className="font-headline font-medium uppercase tracking-tighter text-slate-600 transition-colors duration-300 hover:text-yellow-600" href="/bewama">
-              Portfolio
-            </Link>
-            <Link className="font-headline font-bold uppercase tracking-tighter text-yellow-600 transition-colors duration-300" href="/contact">
-              Inquiry
+            <Link className="nav-link nav-link-active font-bold" href="/contact">
+              Contact
             </Link>
           </nav>
-          <span className="material-symbols-outlined text-slate-900">mail</span>
+          <div className="flex items-center gap-3">
+            <Link
+              href="/contact"
+              aria-label="Contact Rotsi Solutions"
+              className="material-symbols-outlined hidden text-primary transition-all duration-300 hover:-translate-y-0.5 hover:text-tertiary md:inline-flex"
+            >
+              north_east
+            </Link>
+            <SiteMobileMenu items={mobileNavigationItems} />
+          </div>
         </div>
       </header>
 
@@ -45,7 +62,7 @@ export default function ContactPage() {
               <div className="mt-16 grid grid-cols-1 gap-10 border-t border-outline-variant/30 pt-10 sm:grid-cols-2">
                 <div>
                   <p className="font-label text-xs uppercase tracking-[0.3em] text-tertiary">Email</p>
-                  <p className="mt-3 font-body text-lg text-primary">support@rotsi.co.ke</p>
+                  <p className="mt-3 font-body text-lg text-primary">business@rotsi.co.ke</p>
                 </div>
                 <div>
                   <p className="font-label text-xs uppercase tracking-[0.3em] text-tertiary">Phone</p>

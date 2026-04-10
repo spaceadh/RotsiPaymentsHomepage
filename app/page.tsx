@@ -1,8 +1,12 @@
 ﻿import type { Metadata } from 'next';
 import Link from 'next/link';
+import RotsiLogo from '../src/components/brand/RotsiLogo';
 import Layout from '../src/components/site/Layout';
 import MotionReveal from '../src/components/site/MotionReveal';
-import ProjectCard from '../src/components/site/ProjectCard';
+import ProjectsCarousel from '../src/components/site/ProjectsCarousel';
+import SiteMobileMenu from '../src/components/site/SiteMobileMenu';
+import { mainNavigationItems } from '../src/content/navigation';
+import { featuredProjects } from '../src/content/projects';
 
 export const metadata: Metadata = {
   title: 'Websites, Workflows, Custom Solutions',
@@ -59,12 +63,15 @@ const process = [
 ];
 
 export default function HomePage() {
+  const currentYear = new Date().getFullYear();
+  const mobileNavigationItems = mainNavigationItems();
+
   return (
     <Layout>
       <header className="fixed top-0 z-50 w-full bg-white/60 backdrop-blur-xl shadow-[0_20px_50px_rgba(16,24,40,0.04)]">
         <div className="mx-auto flex max-w-[1440px] items-center justify-between px-8 py-6 md:px-12">
-          <Link href="/" className="font-headline text-xl font-bold uppercase tracking-tighter text-yellow-600">
-            ROTSI SOLUTIONS
+          <Link href="/" className="inline-flex w-[132px] text-primary sm:w-[152px]" aria-label="Rotsi home">
+            <RotsiLogo className="block w-full" kind="wordmark" title="Rotsi wordmark" />
           </Link>
           <nav className="hidden items-center gap-12 md:flex">
             <a
@@ -92,13 +99,15 @@ export default function HomePage() {
               Contact
             </Link>
           </nav>
-          <div className="flex items-center">
+          <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className="material-symbols-outlined text-slate-900 transition-transform duration-200 hover:scale-95"
+              aria-label="Contact Rotsi Solutions"
+              className="material-symbols-outlined hidden text-slate-900 transition-transform duration-200 hover:scale-95 md:inline-flex"
             >
               north_east
             </Link>
+            <SiteMobileMenu items={mobileNavigationItems} />
           </div>
         </div>
       </header>
@@ -135,7 +144,7 @@ export default function HomePage() {
                     Start A Project
                   </Link>
                   <a
-                    href="#work"
+                    href="/work"
                     className="inline-flex items-center justify-center border border-primary px-10 py-5 font-headline text-sm uppercase tracking-widest text-primary transition-all duration-300 hover:bg-primary hover:text-white"
                   >
                     View Our Work
@@ -258,31 +267,17 @@ export default function HomePage() {
                   Proof Across Operations And Product.
                 </h2>
                 <p className="mt-8 text-lg leading-relaxed text-secondary">
-                  Two active examples of how we approach practical business systems and custom
-                  product development.
+                  Two active examples of how we approach practical business systems and custom product development.
                 </p>
               </div>
             </MotionReveal>
-            <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-              <ProjectCard
-                index="01. B2B PLATFORM"
-                title="BEWAMA"
-                subtitle="INDUSTRIAL AND BUILDING MATERIALS"
-                href="/bewama"
-                imageAlt="Industrial Infrastructure Concept"
-                imageDataAlt="minimalist isometric 3D floor plan architectural rendering in light grey and white tones with soft clean shadows"
-                imageSrc="https://lh3.googleusercontent.com/aida-public/AB6AXuDfU33MDRUV58v19KPuE--FYmoSBbHH6vXx4jEuj2UwUnHGkIUNW91Q9uNLZav_ccydJ7favYBmLQUokpo1vksU_Cnxcn-rB3bOQHzWvXBCCNHquXqDyb_UWXCSvKz1NGiuYzhISctXDNa_KesacPPgsw1op7JtQY1wsRaZ17d9C3AzPtcTmVE610jltjL3_ZsUHdCFlaDczeyZ4T18g1n0I_Uboo1li3pqGLsdLWjV7V4KEWWEZgz1WvpZN-BFPkKcF0-55HkIPL8"
-              />
-              <ProjectCard
-                index="02. EMPLOYEE APPRECIATION"
-                title="REMINDR"
-                subtitle="MORALE, RECOGNITION, AND TEAM CULTURE"
-                href="/remindr"
-                imageAlt="Flow-State Systems UI"
-                imageDataAlt="minimalist white mobile user interface mockup on a clean studio background with soft ambient lighting"
-                imageSrc="https://lh3.googleusercontent.com/aida-public/AB6AXuDzHhVRBZaXItFXMKLu7R__AouE2FR_qP51Yyy3aWSr2na4eWdkXiSrdMYYSyZ-Z6bGWe_A2XRRaP4ORxfG9Wy7_kNRB_iA9b4OgQYhj6CZSKH-rOGEh6OoXMX4uTardm1j8mRZVl0NLkYZTgxw_OmOVoirqncLfLqhCZS-uUzQ0w5703MvxhvXfBa3o3e4H3FRqkeAbfHlbnJpoL3oEuQnkLpzLwBrmE0mOGAA0AgzWP-Hh4CwMjqk9WHYSQCO0nTk0Z3mOEx4E4o"
-                delay={0.08}
-              />
+            <div className="space-y-10">
+              <ProjectsCarousel projects={featuredProjects} />
+              <div className="flex justify-center">
+                <Link href="/work" className="button-secondary">
+                  View More Projects
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -349,12 +344,14 @@ export default function HomePage() {
 
       <footer className="w-full bg-slate-100 py-20">
         <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-center space-y-12 px-8 text-center md:px-12">
-          <div className="font-headline text-xl font-bold uppercase tracking-widest text-yellow-600">ROTSI SOLUTIONS</div>
+          <div className="w-[148px] text-primary">
+            <RotsiLogo className="block w-full" kind="wordmark" title="Rotsi wordmark" />
+          </div>
           <div className="flex flex-wrap justify-center gap-8 md:gap-12">
             <a className="font-body text-sm uppercase tracking-widest text-slate-500 transition-all hover:text-slate-900" href="#services">
               Services
             </a>
-            <a className="font-body text-sm uppercase tracking-widest text-slate-500 transition-all hover:text-slate-900" href="#work">
+            <a className="font-body text-sm uppercase tracking-widest text-slate-500 transition-all hover:text-slate-900" href="/work">
               Work
             </a>
             <Link className="font-body text-sm uppercase tracking-widest text-slate-500 underline decoration-yellow-600 decoration-2 underline-offset-8 transition-all hover:text-slate-900" href="/blog">
@@ -364,7 +361,7 @@ export default function HomePage() {
               Contact
             </Link>
           </div>
-          <div className="font-body text-sm uppercase tracking-widest text-slate-500">© 2026 ROTSI SOLUTIONS. ARCHITECTURAL EXCELLENCE.</div>
+          <div className="font-body text-sm uppercase tracking-widest text-slate-500">© {currentYear} ROTSI SOLUTIONS. ARCHITECTURAL EXCELLENCE.</div>
         </div>
       </footer>
     </Layout>

@@ -61,4 +61,12 @@ export function getPostBySlug(slug: string) {
   return blogPosts.find((post) => post.slug === slug);
 }
 
+export function formatBlogDate(date: string, locale = 'en-US') {
+  return new Intl.DateTimeFormat(locale, {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  }).format(new Date(date));
+}
+
 

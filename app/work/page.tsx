@@ -1,71 +1,22 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
-import RotsiLogo from '../../../src/components/brand/RotsiLogo';
-import Layout from '../../../src/components/site/Layout';
-import MotionReveal from '../../../src/components/site/MotionReveal';
-import SiteMobileMenu from '../../../src/components/site/SiteMobileMenu';
-import { formatBlogDate, getAllPosts, getPostBySlug } from '../../../src/content/blog';
-import { mainNavigationItems } from '../../../src/content/navigation';
-import { SITE_NAME, absoluteUrl } from '../../../src/lib/site';
+import RotsiLogo from '../../src/components/brand/RotsiLogo';
+import Layout from '../../src/components/site/Layout';
+import MotionReveal from '../../src/components/site/MotionReveal';
+import ProjectCard from '../../src/components/site/ProjectCard';
+import SiteMobileMenu from '../../src/components/site/SiteMobileMenu';
+import { projects } from '../../src/content/projects';
+import { mainNavigationItems } from '../../src/content/navigation';
 
-export function generateStaticParams() {
-  return getAllPosts().map((post) => ({ slug: post.slug }));
-}
+export const metadata: Metadata = {
+  title: 'Work | Selected Systems And Product Projects',
+  description:
+    'Browse selected Rotsi Solutions projects across platforms, internal systems, and workflow-focused product builds.',
+};
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}): Promise<Metadata> {
-  const { slug } = await params;
-  const post = getPostBySlug(slug);
-
-  if (!post) {
-    return { title: 'Article Not Found' };
-  }
-
-  return {
-    title: post.title,
-    description: post.description,
-    alternates: { canonical: `/blog/${post.slug}` },
-    openGraph: {
-      type: 'article',
-      title: post.title,
-      description: post.description,
-      url: `/blog/${post.slug}`,
-      publishedTime: post.publishedAt,
-    },
-  };
-}
-
-export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const post = getPostBySlug(slug);
-
-  if (!post) {
-    notFound();
-  }
-
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    description: post.description,
-    datePublished: post.publishedAt,
-    author: {
-      '@type': 'Organization',
-      name: SITE_NAME,
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: SITE_NAME,
-    },
-    mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
-  };
-
+export default function WorkPage() {
   const currentYear = new Date().getFullYear();
-  const mobileNavigationItems = mainNavigationItems('/blog');
+  const mobileNavigationItems = mainNavigationItems('/work');
 
   return (
     <Layout>
@@ -78,10 +29,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <Link className="nav-link" href="/#services">
               Services
             </Link>
-            <Link className="nav-link" href="/work">
+            <Link className="nav-link nav-link-active font-bold" href="/work">
               Work
             </Link>
-            <Link className="nav-link nav-link-active font-bold" href="/blog">
+            <Link className="nav-link" href="/blog">
               Journal
             </Link>
             <Link className="nav-link" href="/contact">
@@ -102,26 +53,24 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </header>
 
       <main className="pt-32">
-        <section className="mx-auto max-w-[1440px] px-8 pb-20 pt-12 md:px-12 md:pb-24 md:pt-16">
+        <section className="mx-auto max-w-[1440px] px-8 pb-20 pt-12 md:px-12 md:pb-28 md:pt-16">
           <MotionReveal>
             <div className="max-w-5xl">
-              <Link
-                href="/blog"
-                className="inline-flex items-center gap-3 font-headline text-xs font-bold uppercase tracking-[0.34em] text-tertiary transition-all duration-300 hover:text-primary"
-              >
-                <span className="material-symbols-outlined text-base" aria-hidden="true">
-                  west
-                </span>
-                Back To Journal
-              </Link>
-              <span className="mt-8 block font-label text-xs font-bold uppercase tracking-[0.42em] text-tertiary md:text-sm">
-                {post.category}
+              <span className="mb-6 block font-label text-xs font-bold uppercase tracking-[0.42em] text-tertiary md:text-sm">
+                Project Index
               </span>
-              <h1 className="mt-6 max-w-5xl font-headline text-[2.8rem] font-bold leading-[0.92] tracking-[-0.045em] text-primary md:text-[4rem] lg:text-[4.7rem] [text-wrap:balance]">
-                {post.title}
+              <h1 className="max-w-5xl font-headline text-[3rem] font-bold leading-[0.9] tracking-[-0.045em] text-primary md:text-[4.2rem] lg:text-[4.9rem] xl:text-[5.25rem]">
+                SELECTED SYSTEMS,
+                <br />
+                PRODUCTS,
+                <br />
+                AND OPERATIONAL
+                <br />
+                BUILDS.
               </h1>
-              <p className="body-copy mt-8 max-w-3xl text-lg text-secondary md:text-xl">
-                {post.description}
+              <p className="body-copy mt-8 max-w-2xl font-body text-base font-light text-secondary md:text-lg">
+                A closer look at the work behind the interfaces: practical platforms, internal
+                systems, and focused product builds shaped around real operational needs.
               </p>
             </div>
           </MotionReveal>
@@ -130,72 +79,78 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
               <div className="section-card p-8">
                 <span className="font-label text-xs uppercase tracking-[0.3em] text-tertiary">
-                  Published
+                  {String(projects.length).padStart(2, '0')}
                 </span>
                 <p className="mt-4 font-headline text-2xl font-bold uppercase tracking-tight text-primary">
-                  <time dateTime={post.publishedAt}>{formatBlogDate(post.publishedAt)}</time>
+                  Active Case Studies
                 </p>
               </div>
               <div className="section-card p-8">
                 <span className="font-label text-xs uppercase tracking-[0.3em] text-tertiary">
-                  Reading Time
+                  Focus
                 </span>
                 <p className="mt-4 font-headline text-2xl font-bold uppercase tracking-tight text-primary">
-                  {post.readingTime}
+                  Operations And Product
                 </p>
               </div>
               <div className="section-card p-8">
                 <span className="font-label text-xs uppercase tracking-[0.3em] text-tertiary">
-                  Section
+                  Outcome
                 </span>
                 <p className="mt-4 font-headline text-2xl font-bold uppercase tracking-tight text-primary">
-                  Journal
+                  Serious Systems, Clear Delivery
                 </p>
               </div>
             </div>
           </MotionReveal>
         </section>
 
-        <section className="bg-surface-container-low/80 py-24 md:py-32">
+        <section className="bg-surface-container-low/80 py-28 md:py-36">
           <div className="mx-auto max-w-[1440px] px-8 md:px-12">
-            <article className="glass-panel mx-auto max-w-4xl p-8 md:p-12 lg:p-16">
-              <div className="space-y-8 border-t border-black/5 pt-8 md:space-y-10 md:pt-10">
-                {post.content.map((paragraph, index) => (
-                  <MotionReveal key={paragraph} delay={index * 0.05}>
-                    <p className="body-copy text-base text-primary/88 md:text-lg">{paragraph}</p>
-                  </MotionReveal>
-                ))}
+            <MotionReveal>
+              <div className="mb-16 max-w-3xl">
+                <span className="font-label text-sm font-bold uppercase tracking-[0.4em] text-tertiary">
+                  All Projects
+                </span>
+                <h2 className="mt-6 font-headline text-4xl font-bold uppercase leading-tight tracking-[-0.03em] text-primary md:text-6xl">
+                  Work That Balances Precision And Utility.
+                </h2>
               </div>
-            </article>
+            </MotionReveal>
+
+            <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+              {projects.map((project, index) => (
+                <ProjectCard key={project.title} {...project} delay={index * 0.08} />
+              ))}
+            </div>
           </div>
         </section>
 
-        <section className="bg-primary-container py-24 md:py-32">
+        <section className="bg-primary-container py-28 md:py-36">
           <div className="mx-auto max-w-[1440px] px-8 md:px-12">
             <MotionReveal>
               <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
                 <div className="max-w-4xl">
                   <span className="font-label text-sm font-bold uppercase tracking-[0.4em] text-tertiary">
-                    Continue Reading
+                    Next Project
                   </span>
                   <h2 className="mt-6 font-headline text-4xl font-bold uppercase leading-tight tracking-[-0.03em] text-white md:text-6xl">
-                    Explore More Notes From The Journal.
+                    Need Something Built With This Level Of Intent?
                   </h2>
                   <p className="body-copy mt-8 max-w-2xl text-lg text-white/72">
-                    More writing on operational systems, software structure, and the decisions that
-                    shape resilient digital work.
+                    If your team needs a website, workflow system, or custom product experience,
+                    we can shape it with the same clarity and execution.
                   </p>
                 </div>
                 <div>
-                  <Link href="/blog" className="button-inverse">
-                    View All Articles
+                  <Link href="/contact" className="button-inverse">
+                    Start A Project
                   </Link>
                 </div>
               </div>
             </MotionReveal>
           </div>
         </section>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </main>
 
       <footer className="w-full bg-surface-container-low py-24">
@@ -207,13 +162,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <Link className="footer-link" href="/#services">
               Services
             </Link>
-            <Link className="footer-link" href="/work">
-              Work
-            </Link>
             <Link
               className="footer-link underline decoration-tertiary decoration-2 underline-offset-8"
-              href="/blog"
+              href="/work"
             >
+              Work
+            </Link>
+            <Link className="footer-link" href="/blog">
               Journal
             </Link>
             <Link className="footer-link" href="/contact">

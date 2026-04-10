@@ -1,13 +1,16 @@
 ﻿export const SITE_URL = 'https://rotsi.co.ke';
-export const SITE_NAME = 'Rotsi Solutions';
+export const SITE_NAME = 'Rotsi';
+export const WORDMARK_LOGO_PATH = '/brand/rotsi-wordmark-primary.svg';
+export const MONOGRAM_LOGO_PATH = '/brand/rotsi-monogram-primary.svg';
 
 export const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: SITE_NAME,
   url: SITE_URL,
-  logo: `${SITE_URL}/favicon.png`,
-  email: 'support@rotsi.co.ke',
+  logo: `${SITE_URL}${WORDMARK_LOGO_PATH}`,
+  image: `${SITE_URL}${WORDMARK_LOGO_PATH}`,
+  email: 'business@rotsi.co.ke',
   telephone: '+254745474586',
   address: {
     '@type': 'PostalAddress',
@@ -20,4 +23,3 @@ export const organizationJsonLd = {
 export function absoluteUrl(path: string) {
   return new URL(path, SITE_URL).toString();
 }
-
