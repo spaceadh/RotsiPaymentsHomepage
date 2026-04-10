@@ -1,4 +1,5 @@
 import type { MobileMenuItem } from '../components/site/SiteMobileMenu';
+import type { ProjectEntry } from './projects';
 
 export const mainNavigationItems = (activeHref?: string): MobileMenuItem[] => [
   { href: '/#services', label: 'Services', active: activeHref === '/#services' },
@@ -7,17 +8,10 @@ export const mainNavigationItems = (activeHref?: string): MobileMenuItem[] => [
   { href: '/contact', label: 'Contact', active: activeHref === '/contact' },
 ];
 
-export const bewamaNavigationItems = (): MobileMenuItem[] => [
-  { href: '/projects/bewama#expertise', label: 'Expertise' },
-  { href: '/projects/bewama#projects', label: 'Projects' },
-  { href: '/projects/bewama#sustainability', label: 'Sustainability' },
-  { href: '/contact', label: 'Contact' },
-];
-
-export const kumbushaNavigationItems = (): MobileMenuItem[] => [
-  { href: '/projects/kumbusha#overview', label: 'Overview' },
-  { href: '/projects/kumbusha#philosophy', label: 'Philosophy' },
-  { href: '/projects/kumbusha#systems', label: 'Systems' },
-  { href: '/projects/kumbusha#architecture', label: 'Architecture' },
+export const projectNavigationItems = (project: Pick<ProjectEntry, 'href' | 'sections'>): MobileMenuItem[] => [
+  ...project.sections.map((section) => ({
+    href: `${project.href}#${section.id}`,
+    label: section.label,
+  })),
   { href: '/contact', label: 'Contact' },
 ];

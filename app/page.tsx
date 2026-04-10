@@ -4,14 +4,15 @@ import RotsiLogo from '../src/components/brand/RotsiLogo';
 import Layout from '../src/components/site/Layout';
 import MotionReveal from '../src/components/site/MotionReveal';
 import ProjectsCarousel from '../src/components/site/ProjectsCarousel';
+import SiteFooter from '../src/components/site/SiteFooter';
 import SiteMobileMenu from '../src/components/site/SiteMobileMenu';
 import { mainNavigationItems } from '../src/content/navigation';
 import { featuredProjects } from '../src/content/projects';
 
 export const metadata: Metadata = {
-  title: 'Websites, Workflows, Custom Solutions',
+  title: 'Business Automation Systems, Custom Platforms, Workflow Infrastructure',
   description:
-    'We build websites, automate workflows, and create custom solutions so businesses can focus on what they do best.',
+    'Rotsi builds business automation systems, custom platforms, and workflow infrastructure for businesses that need clear, dependable execution.',
 };
 
 const services = [
@@ -29,7 +30,7 @@ const services = [
   },
   {
     index: '03',
-    title: 'Custom Solutions',
+    title: 'Custom Platforms',
     copy:
       'We develop tailored systems for startups, internal operations, and businesses with specific technical needs.',
   },
@@ -63,7 +64,6 @@ const process = [
 ];
 
 export default function HomePage() {
-  const currentYear = new Date().getFullYear();
   const mobileNavigationItems = mainNavigationItems();
 
   return (
@@ -102,7 +102,7 @@ export default function HomePage() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              aria-label="Contact Rotsi Solutions"
+              aria-label="Contact Rotsi"
               className="material-symbols-outlined hidden text-slate-900 transition-transform duration-200 hover:scale-95 md:inline-flex"
             >
               north_east
@@ -125,9 +125,9 @@ export default function HomePage() {
                   <br />
                   AUTOMATE WORKFLOWS,
                   <br />
-                  AND CREATE CUSTOM
+                  AND DESIGN CUSTOM
                   <br />
-                  SOLUTIONS.
+                  PLATFORMS.
                 </h1>
                 <p className="mt-6 max-w-2xl font-headline text-2xl font-medium uppercase leading-tight tracking-[-0.02em] text-primary md:text-3xl">
                   So businesses can focus on what they do best.
@@ -267,7 +267,7 @@ export default function HomePage() {
                   Proof Across Operations And Product.
                 </h2>
                 <p className="mt-8 text-lg leading-relaxed text-secondary">
-                  Two active examples of how we approach practical business systems and custom product development.
+                  Selected case studies showing how we approach commerce systems, internal platforms, and workflow-driven products.
                 </p>
               </div>
             </MotionReveal>
@@ -324,8 +324,8 @@ export default function HomePage() {
                     Let Us Handle The Technical Side.
                   </h2>
                   <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/80">
-                    If your business needs a website, a workflow system, or a custom digital
-                    solution, we can help you build it properly.
+                    If your business needs a website, a workflow system, or a custom platform,
+                    we can help you scope it and build it properly.
                   </p>
                 </div>
                 <div>
@@ -333,7 +333,7 @@ export default function HomePage() {
                     href="/contact"
                     className="inline-flex bg-white px-12 py-5 font-headline text-sm uppercase tracking-widest text-primary transition-all duration-300 hover:bg-[#ffe088]"
                   >
-                    Contact Rotsi Solutions
+                    Contact Rotsi
                   </Link>
                 </div>
               </div>
@@ -342,28 +342,7 @@ export default function HomePage() {
         </section>
       </main>
 
-      <footer className="w-full bg-slate-100 py-20">
-        <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-center space-y-12 px-8 text-center md:px-12">
-          <div className="w-[148px] text-primary">
-            <RotsiLogo className="block w-full" kind="wordmark" title="Rotsi wordmark" />
-          </div>
-          <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-            <a className="font-body text-sm uppercase tracking-widest text-slate-500 transition-all hover:text-slate-900" href="#services">
-              Services
-            </a>
-            <a className="font-body text-sm uppercase tracking-widest text-slate-500 transition-all hover:text-slate-900" href="/work">
-              Work
-            </a>
-            <Link className="font-body text-sm uppercase tracking-widest text-slate-500 underline decoration-yellow-600 decoration-2 underline-offset-8 transition-all hover:text-slate-900" href="/blog">
-              Journal
-            </Link>
-            <Link className="font-body text-sm uppercase tracking-widest text-slate-500 transition-all hover:text-slate-900" href="/contact">
-              Contact
-            </Link>
-          </div>
-          <div className="font-body text-sm uppercase tracking-widest text-slate-500">© {currentYear} ROTSI SOLUTIONS. ARCHITECTURAL EXCELLENCE.</div>
-        </div>
-      </footer>
+      <SiteFooter />
     </Layout>
   );
 }

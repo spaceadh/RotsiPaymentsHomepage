@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import RotsiLogo from '../../../src/components/brand/RotsiLogo';
 import Layout from '../../../src/components/site/Layout';
 import MotionReveal from '../../../src/components/site/MotionReveal';
+import SiteFooter from '../../../src/components/site/SiteFooter';
 import SiteMobileMenu from '../../../src/components/site/SiteMobileMenu';
 import { formatBlogDate, getAllPosts, getPostBySlug } from '../../../src/content/blog';
 import { mainNavigationItems } from '../../../src/content/navigation';
@@ -28,6 +29,7 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.description,
+    keywords: post.keywords,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       type: 'article',
@@ -53,6 +55,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     headline: post.title,
     description: post.description,
     datePublished: post.publishedAt,
+    keywords: post.keywords.join(', '),
     author: {
       '@type': 'Organization',
       name: SITE_NAME,
@@ -64,7 +67,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     mainEntityOfPage: absoluteUrl(`/blog/${post.slug}`),
   };
 
-  const currentYear = new Date().getFullYear();
   const mobileNavigationItems = mainNavigationItems('/blog');
 
   return (
@@ -91,7 +93,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              aria-label="Contact Rotsi Solutions"
+              aria-label="Contact Rotsi"
               className="material-symbols-outlined hidden text-primary transition-all duration-300 hover:-translate-y-0.5 hover:text-tertiary md:inline-flex"
             >
               north_east
@@ -146,10 +148,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               </div>
               <div className="section-card p-8">
                 <span className="font-label text-xs uppercase tracking-[0.3em] text-tertiary">
-                  Section
+                  Intent
                 </span>
                 <p className="mt-4 font-headline text-2xl font-bold uppercase tracking-tight text-primary">
-                  Journal
+                  Practical Search-Led Writing
                 </p>
               </div>
             </div>
@@ -179,11 +181,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     Continue Reading
                   </span>
                   <h2 className="mt-6 font-headline text-4xl font-bold uppercase leading-tight tracking-[-0.03em] text-white md:text-6xl">
-                    Explore More Notes From The Journal.
+                    Explore more notes on systems, workflows, and delivery.
                   </h2>
                   <p className="body-copy mt-8 max-w-2xl text-lg text-white/72">
-                    More writing on operational systems, software structure, and the decisions that
-                    shape resilient digital work.
+                    The journal stays close to the work: commerce systems, WhatsApp automations, internal platforms, and the decisions behind them.
                   </p>
                 </div>
                 <div>
@@ -198,33 +199,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </main>
 
-      <footer className="w-full bg-surface-container-low py-24">
-        <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-center space-y-12 px-8 text-center md:px-12">
-          <div className="w-[148px] text-primary">
-            <RotsiLogo className="block w-full" kind="wordmark" title="Rotsi wordmark" />
-          </div>
-          <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-            <Link className="footer-link" href="/#services">
-              Services
-            </Link>
-            <Link className="footer-link" href="/work">
-              Work
-            </Link>
-            <Link
-              className="footer-link underline decoration-tertiary decoration-2 underline-offset-8"
-              href="/blog"
-            >
-              Journal
-            </Link>
-            <Link className="footer-link" href="/contact">
-              Contact
-            </Link>
-          </div>
-          <div className="font-body text-sm uppercase tracking-widest text-secondary">
-            © {currentYear} ROTSI SOLUTIONS. ARCHITECTURAL EXCELLENCE.
-          </div>
-        </div>
-      </footer>
+      <SiteFooter active="blog" />
     </Layout>
   );
 }
+

@@ -1,22 +1,25 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import RotsiLogo from '../../src/components/brand/RotsiLogo';
 import Layout from '../../src/components/site/Layout';
 import MotionReveal from '../../src/components/site/MotionReveal';
 import ProjectCard from '../../src/components/site/ProjectCard';
+import SiteFooter from '../../src/components/site/SiteFooter';
 import SiteMobileMenu from '../../src/components/site/SiteMobileMenu';
 import { projects } from '../../src/content/projects';
 import { mainNavigationItems } from '../../src/content/navigation';
 
 export const metadata: Metadata = {
-  title: 'Work | Selected Systems And Product Projects',
+  title: 'Work | Case Studies Across Platforms And Internal Systems',
   description:
-    'Browse selected Rotsi Solutions projects across platforms, internal systems, and workflow-focused product builds.',
+    'Browse Rotsi case studies across business automation systems, custom platforms, workflow infrastructure, and internal tools built for real operating needs.',
 };
 
 export default function WorkPage() {
-  const currentYear = new Date().getFullYear();
   const mobileNavigationItems = mainNavigationItems('/work');
+  const externalProjects = projects.filter((project) => project.surface === 'External Platform');
+  const internalProjects = projects.filter((project) => project.surface === 'Internal Platform');
+  const ventureProjects = projects.filter((project) => project.surface === 'In-Progress Venture');
 
   return (
     <Layout>
@@ -42,7 +45,7 @@ export default function WorkPage() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              aria-label="Contact Rotsi Solutions"
+              aria-label="Contact Rotsi"
               className="material-symbols-outlined hidden text-primary transition-all duration-300 hover:-translate-y-0.5 hover:text-tertiary md:inline-flex"
             >
               north_east
@@ -57,20 +60,19 @@ export default function WorkPage() {
           <MotionReveal>
             <div className="max-w-5xl">
               <span className="mb-6 block font-label text-xs font-bold uppercase tracking-[0.42em] text-tertiary md:text-sm">
-                Project Index
+                Work
               </span>
               <h1 className="max-w-5xl font-headline text-[3rem] font-bold leading-[0.9] tracking-[-0.045em] text-primary md:text-[4.2rem] lg:text-[4.9rem] xl:text-[5.25rem]">
-                SELECTED SYSTEMS,
+                CASE STUDIES IN
                 <br />
-                PRODUCTS,
+                BUSINESS SYSTEMS,
                 <br />
-                AND OPERATIONAL
+                PLATFORMS,
                 <br />
-                BUILDS.
+                AND WORKFLOW DESIGN.
               </h1>
-              <p className="body-copy mt-8 max-w-2xl font-body text-base font-light text-secondary md:text-lg">
-                A closer look at the work behind the interfaces: practical platforms, internal
-                systems, and focused product builds shaped around real operational needs.
+              <p className="body-copy mt-8 max-w-3xl font-body text-base font-light text-secondary md:text-lg">
+                Rotsi works as a technical partner on projects that need more than a surface redesign. These case studies show how we shape product direction, system logic, workflow mechanics, and delivery around real commercial needs.
               </p>
             </div>
           </MotionReveal>
@@ -90,96 +92,124 @@ export default function WorkPage() {
                   Focus
                 </span>
                 <p className="mt-4 font-headline text-2xl font-bold uppercase tracking-tight text-primary">
-                  Operations And Product
+                  Platforms, Internal Tools, Automation
                 </p>
               </div>
               <div className="section-card p-8">
                 <span className="font-label text-xs uppercase tracking-[0.3em] text-tertiary">
-                  Outcome
+                  Delivery
                 </span>
                 <p className="mt-4 font-headline text-2xl font-bold uppercase tracking-tight text-primary">
-                  Serious Systems, Clear Delivery
+                  Structured For Real Business Use
                 </p>
               </div>
             </div>
           </MotionReveal>
         </section>
 
-        <section className="bg-surface-container-low/80 py-28 md:py-36">
+        <section className="bg-surface-container-low/80 py-24 md:py-32">
           <div className="mx-auto max-w-[1440px] px-8 md:px-12">
             <MotionReveal>
               <div className="mb-16 max-w-3xl">
                 <span className="font-label text-sm font-bold uppercase tracking-[0.4em] text-tertiary">
-                  All Projects
+                  External Platforms
                 </span>
                 <h2 className="mt-6 font-headline text-4xl font-bold uppercase leading-tight tracking-[-0.03em] text-primary md:text-6xl">
-                  Work That Balances Precision And Utility.
+                  Public-facing systems built for growth, clarity, and search visibility.
                 </h2>
               </div>
             </MotionReveal>
-
-            <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-              {projects.map((project, index) => (
-                <ProjectCard key={project.title} {...project} delay={index * 0.08} />
+            <div className="grid grid-cols-1 gap-12 md:grid-cols-2 xl:grid-cols-3">
+              {externalProjects.map((project, index) => (
+                <ProjectCard
+                  key={project.slug}
+                  index={project.index}
+                  title={project.title}
+                  subtitle={project.subtitle}
+                  href={project.href}
+                  surface={project.surface}
+                  status={project.status}
+                  imageAlt={project.image.alt}
+                  imageDataAlt={project.image.dataAlt}
+                  imageSrc={project.image.src}
+                  summary={project.cardSummary}
+                  delay={index * 0.06}
+                  className="h-[650px]"
+                />
               ))}
             </div>
           </div>
         </section>
 
-        <section className="bg-primary-container py-28 md:py-36">
+        <section className="mx-auto max-w-[1440px] px-8 py-24 md:px-12 md:py-32">
+          <MotionReveal>
+            <div className="mb-16 max-w-3xl">
+              <span className="font-label text-sm font-bold uppercase tracking-[0.4em] text-tertiary">
+                Internal Platforms
+              </span>
+              <h2 className="mt-6 font-headline text-4xl font-bold uppercase leading-tight tracking-[-0.03em] text-primary md:text-6xl">
+                Systems built to improve control, continuity, and internal visibility.
+              </h2>
+            </div>
+          </MotionReveal>
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+            {internalProjects.map((project, index) => (
+              <ProjectCard
+                key={project.slug}
+                index={project.index}
+                title={project.title}
+                subtitle={project.subtitle}
+                href={project.href}
+                surface={project.surface}
+                status={project.status}
+                imageAlt={project.image.alt}
+                imageDataAlt={project.image.dataAlt}
+                imageSrc={project.image.src}
+                summary={project.cardSummary}
+                delay={index * 0.06}
+                className="h-[650px]"
+              />
+            ))}
+          </div>
+        </section>
+
+        <section className="bg-primary py-24 md:py-32">
           <div className="mx-auto max-w-[1440px] px-8 md:px-12">
             <MotionReveal>
-              <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
-                <div className="max-w-4xl">
-                  <span className="font-label text-sm font-bold uppercase tracking-[0.4em] text-tertiary">
-                    Next Project
-                  </span>
-                  <h2 className="mt-6 font-headline text-4xl font-bold uppercase leading-tight tracking-[-0.03em] text-white md:text-6xl">
-                    Need Something Built With This Level Of Intent?
-                  </h2>
-                  <p className="body-copy mt-8 max-w-2xl text-lg text-white/72">
-                    If your team needs a website, workflow system, or custom product experience,
-                    we can shape it with the same clarity and execution.
-                  </p>
-                </div>
-                <div>
-                  <Link href="/contact" className="button-inverse">
-                    Start A Project
-                  </Link>
-                </div>
+              <div className="mb-16 max-w-3xl">
+                <span className="font-label text-sm font-bold uppercase tracking-[0.4em] text-[#ffe088]">
+                  In-Progress Ventures
+                </span>
+                <h2 className="mt-6 font-headline text-4xl font-bold uppercase leading-tight tracking-[-0.03em] text-white md:text-6xl">
+                  Product bets we are shaping around real workflow problems.
+                </h2>
               </div>
             </MotionReveal>
+            <div className="grid grid-cols-1 gap-12">
+              {ventureProjects.map((project, index) => (
+                <ProjectCard
+                  key={project.slug}
+                  index={project.index}
+                  title={project.title}
+                  subtitle={project.subtitle}
+                  href={project.href}
+                  surface={project.surface}
+                  status={project.status}
+                  imageAlt={project.image.alt}
+                  imageDataAlt={project.image.dataAlt}
+                  imageSrc={project.image.src}
+                  summary={project.cardSummary}
+                  delay={index * 0.06}
+                  className="h-[650px] border-white/10 bg-primary-container text-white [&_h3]:text-white [&_p]:text-white/72 [&_span]:text-white"
+                />
+              ))}
+            </div>
           </div>
         </section>
       </main>
 
-      <footer className="w-full bg-surface-container-low py-24">
-        <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-center space-y-12 px-8 text-center md:px-12">
-          <div className="w-[148px] text-primary">
-            <RotsiLogo className="block w-full" kind="wordmark" title="Rotsi wordmark" />
-          </div>
-          <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-            <Link className="footer-link" href="/#services">
-              Services
-            </Link>
-            <Link
-              className="footer-link underline decoration-tertiary decoration-2 underline-offset-8"
-              href="/work"
-            >
-              Work
-            </Link>
-            <Link className="footer-link" href="/blog">
-              Journal
-            </Link>
-            <Link className="footer-link" href="/contact">
-              Contact
-            </Link>
-          </div>
-          <div className="font-body text-sm uppercase tracking-widest text-secondary">
-            © {currentYear} ROTSI SOLUTIONS. ARCHITECTURAL EXCELLENCE.
-          </div>
-        </div>
-      </footer>
+      <SiteFooter active="work" />
     </Layout>
   );
 }
+

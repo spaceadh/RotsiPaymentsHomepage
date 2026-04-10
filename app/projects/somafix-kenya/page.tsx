@@ -1,11 +1,11 @@
 ﻿import type { Metadata } from 'next';
-import KumbushaCaseStudy from '../../../src/components/projects/KumbushaCaseStudy';
+import SomafixWebsiteCaseStudy from '../../../src/components/projects/SomafixWebsiteCaseStudy';
 import { getProjectBySlug } from '../../../src/content/projects';
 
-const project = getProjectBySlug('kumbusha');
+const project = getProjectBySlug('somafix-kenya');
 
 if (!project) {
-  throw new Error('Missing Kumbusha project entry');
+  throw new Error('Missing Somafix Kenya project entry');
 }
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function KumbushaPage() {
-  return <KumbushaCaseStudy project={project} />;
+export default function SomafixKenyaPage() {
+  return <SomafixWebsiteCaseStudy project={project} />;
 }
 

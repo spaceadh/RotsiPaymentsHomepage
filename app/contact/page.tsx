@@ -3,12 +3,13 @@ import Link from 'next/link';
 import Layout from '../../src/components/site/Layout';
 import MotionReveal from '../../src/components/site/MotionReveal';
 import RotsiLogo from '../../src/components/brand/RotsiLogo';
+import SiteFooter from '../../src/components/site/SiteFooter';
 import SiteMobileMenu from '../../src/components/site/SiteMobileMenu';
 import { mainNavigationItems } from '../../src/content/navigation';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Start a project inquiry with Rotsi Solutions.',
+  description: 'Start a project inquiry with Rotsi.',
 };
 
 export default function ContactPage() {
@@ -38,7 +39,7 @@ export default function ContactPage() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              aria-label="Contact Rotsi Solutions"
+              aria-label="Contact Rotsi"
               className="material-symbols-outlined hidden text-primary transition-all duration-300 hover:-translate-y-0.5 hover:text-tertiary md:inline-flex"
             >
               north_east
@@ -54,10 +55,10 @@ export default function ContactPage() {
             <MotionReveal>
               <span className="mb-6 block font-label text-sm font-bold uppercase tracking-[0.4em] text-tertiary">Inquiry</span>
               <h1 className="mb-12 max-w-4xl font-headline text-5xl font-bold leading-tight tracking-[-0.03em] text-primary md:text-7xl">
-                LET&apos;S ARCHITECT THE NEXT LEVER.
+                LET&apos;S BUILD THE RIGHT SYSTEM FOR THE JOB.
               </h1>
               <p className="max-w-2xl font-body text-xl font-light leading-relaxed text-secondary md:text-2xl">
-                Share the operating problem, the ambition, and the timeline. We will return with a structured path forward.
+                Share the business problem, the timeline, and the outcome you need. We will come back with a clear path forward.
               </p>
               <div className="mt-16 grid grid-cols-1 gap-10 border-t border-outline-variant/30 pt-10 sm:grid-cols-2">
                 <div>
@@ -107,6 +108,7 @@ export default function ContactPage() {
           </div>
         </section>
       </main>
+      <SiteFooter active="contact" />
     </Layout>
   );
 }

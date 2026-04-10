@@ -9,24 +9,24 @@ const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} | Architectural Excellence`,
+    default: `${SITE_NAME} | Business Automation Systems`,
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    'Rotsi Solutions engineers modern levers for industrial infrastructure, enterprise systems, and flow-state products.',
+    'Rotsi builds business automation systems, custom platforms, and workflow infrastructure for teams that need serious digital execution.',
   alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
     url: SITE_URL,
-    title: `${SITE_NAME} | Architectural Excellence`,
+    title: `${SITE_NAME} | Business Automation Systems`,
     description:
-      'Innovation is the core. Tech is the tool. Rotsi Solutions builds precision-engineered systems for elite growth.',
+      'Rotsi builds business automation systems, custom platforms, and workflow infrastructure for real commercial use.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${SITE_NAME} | Architectural Excellence`,
+    title: `${SITE_NAME} | Business Automation Systems`,
     description:
-      'Innovation is the core. Tech is the tool. Rotsi Solutions builds precision-engineered systems for elite growth.',
+      'Rotsi builds business automation systems, custom platforms, and workflow infrastructure for real commercial use.',
   },
 };
 

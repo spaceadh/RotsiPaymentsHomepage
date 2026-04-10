@@ -83,7 +83,16 @@ export default function ProjectsCarousel({ projects }: ProjectsCarouselProps) {
           {projects.map((project) => (
             <div key={project.title} className="min-w-full">
               <ProjectCard
-                {...project}
+                index={project.index}
+                title={project.title}
+                subtitle={project.subtitle}
+                href={project.href}
+                surface={project.surface}
+                status={project.status}
+                imageAlt={project.image.alt}
+                imageDataAlt={project.image.dataAlt}
+                imageSrc={project.image.src}
+                summary={project.cardSummary}
                 reveal={false}
                 className="h-[560px] border-none shadow-none sm:h-[620px] lg:h-[680px]"
               />
@@ -98,7 +107,7 @@ export default function ProjectsCarousel({ projects }: ProjectsCarouselProps) {
             {activeProject.index}
           </p>
           <p className="body-copy mt-3 max-w-2xl text-base text-secondary">
-            {activeProject.summary}
+            {activeProject.cardSummary}
           </p>
         </div>
         <div className="flex flex-wrap gap-3 lg:justify-end">

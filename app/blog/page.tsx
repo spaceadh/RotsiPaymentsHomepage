@@ -3,6 +3,7 @@ import Link from 'next/link';
 import RotsiLogo from '../../src/components/brand/RotsiLogo';
 import Layout from '../../src/components/site/Layout';
 import MotionReveal from '../../src/components/site/MotionReveal';
+import SiteFooter from '../../src/components/site/SiteFooter';
 import SiteMobileMenu from '../../src/components/site/SiteMobileMenu';
 import { formatBlogDate, getAllPosts } from '../../src/content/blog';
 import { mainNavigationItems } from '../../src/content/navigation';
@@ -10,13 +11,11 @@ import { mainNavigationItems } from '../../src/content/navigation';
 export const metadata: Metadata = {
   title: 'Journal',
   description:
-    'Rotsi Solutions journal on software architecture, industrial digital systems, and high-performance operational design.',
+    'Practical notes from Rotsi on business automation systems, custom platforms, workflow infrastructure, and the decisions behind useful digital products.',
 };
 
 export default function BlogIndexPage() {
-  const currentYear = new Date().getFullYear();
   const mobileNavigationItems = mainNavigationItems('/blog');
-
   const posts = getAllPosts();
 
   return (
@@ -43,7 +42,7 @@ export default function BlogIndexPage() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              aria-label="Contact Rotsi Solutions"
+              aria-label="Contact Rotsi"
               className="material-symbols-outlined hidden text-primary transition-all duration-300 hover:-translate-y-0.5 hover:text-tertiary md:inline-flex"
             >
               north_east
@@ -61,17 +60,16 @@ export default function BlogIndexPage() {
                 Journal
               </span>
               <h1 className="max-w-5xl font-headline text-[3rem] font-bold leading-[0.9] tracking-[-0.045em] text-primary md:text-[4.2rem] lg:text-[4.9rem] xl:text-[5.25rem]">
-                THINKING ON
+                NOTES ON
                 <br />
-                SYSTEMS,
+                COMMERCE SYSTEMS,
                 <br />
-                SOFTWARE,
+                WORKFLOWS,
                 <br />
-                AND EXECUTION.
+                AND INTERNAL PLATFORMS.
               </h1>
-              <p className="body-copy mt-8 max-w-2xl font-body text-base font-light text-secondary md:text-lg">
-                Strategic writing on software architecture, industrial systems, and the operational
-                decisions that make digital work more durable, clear, and useful.
+              <p className="body-copy mt-8 max-w-3xl font-body text-base font-light text-secondary md:text-lg">
+                The journal covers the kinds of problems Rotsi actually works on: B2B commerce, WhatsApp workflows, internal operations systems, and the design decisions that make those tools easier to use and easier to trust.
               </p>
             </div>
           </MotionReveal>
@@ -88,10 +86,10 @@ export default function BlogIndexPage() {
               </div>
               <div className="section-card p-8">
                 <span className="font-label text-xs uppercase tracking-[0.3em] text-tertiary">
-                  Themes
+                  Focus
                 </span>
                 <p className="mt-4 font-headline text-2xl font-bold uppercase tracking-tight text-primary">
-                  Architecture, Infrastructure, Performance
+                  Ecommerce, Automation, Internal Systems
                 </p>
               </div>
               <div className="section-card p-8">
@@ -99,7 +97,7 @@ export default function BlogIndexPage() {
                   Intent
                 </span>
                 <p className="mt-4 font-headline text-2xl font-bold uppercase tracking-tight text-primary">
-                  Serious Notes For Serious Operators
+                  Useful Writing For Operators And Builders
                 </p>
               </div>
             </div>
@@ -114,7 +112,7 @@ export default function BlogIndexPage() {
                   Articles
                 </span>
                 <h2 className="mt-6 font-headline text-4xl font-bold uppercase leading-tight tracking-[-0.03em] text-primary md:text-6xl [text-wrap:balance]">
-                  Editorial Notes With The Same Design Discipline.
+                  Search-aware writing anchored in real delivery work.
                 </h2>
               </div>
             </MotionReveal>
@@ -157,33 +155,8 @@ export default function BlogIndexPage() {
         </section>
       </main>
 
-      <footer className="w-full bg-surface-container-low py-24">
-        <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-center space-y-12 px-8 text-center md:px-12">
-          <div className="w-[148px] text-primary">
-            <RotsiLogo className="block w-full" kind="wordmark" title="Rotsi wordmark" />
-          </div>
-          <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-            <Link className="footer-link" href="/#services">
-              Services
-            </Link>
-            <Link className="footer-link" href="/work">
-              Work
-            </Link>
-            <Link
-              className="footer-link underline decoration-tertiary decoration-2 underline-offset-8"
-              href="/blog"
-            >
-              Journal
-            </Link>
-            <Link className="footer-link" href="/contact">
-              Contact
-            </Link>
-          </div>
-          <div className="font-body text-sm uppercase tracking-widest text-secondary">
-            © {currentYear} ROTSI SOLUTIONS. ARCHITECTURAL EXCELLENCE.
-          </div>
-        </div>
-      </footer>
+      <SiteFooter active="blog" />
     </Layout>
   );
 }
+
