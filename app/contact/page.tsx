@@ -10,6 +10,7 @@ import { mainNavigationItems } from '../../src/content/navigation';
 export const metadata: Metadata = {
   title: 'Contact',
   description: 'Start a project inquiry with Rotsi.',
+  alternates: { canonical: '/contact' },
 };
 
 export default function ContactPage() {

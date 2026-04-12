@@ -1,45 +1,17 @@
-﻿import { SITE_URL } from '../src/lib/seo';
+import { getAllPosts } from '../src/content/blog';
+import { projects } from '../src/content/projects';
+import { absoluteUrl } from '../src/lib/site';
 
 export default function sitemap() {
   const now = new Date();
+  const staticRoutes = ['/', '/contact', '/work', '/blog'];
+  const projectRoutes = projects.map((project) => project.href);
+  const blogRoutes = getAllPosts().map((post) => `/blog/${post.slug}`);
 
-  return [
-    {
-      url: `${SITE_URL}/`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 1,
-    },
-    {
-      url: `${SITE_URL}/ibiza`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/contact`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/work`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/blog`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/get-demo`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-  ];
+  return [...staticRoutes, ...projectRoutes, ...blogRoutes].map((path) => ({
+    url: absoluteUrl(path),
+    lastModified: now,
+    changeFrequency: path === '/contact' ? 'monthly' : 'weekly',
+    priority: path === '/' ? 1 : path.startsWith('/blog/') ? 0.7 : 0.8,
+  }));
 }
-

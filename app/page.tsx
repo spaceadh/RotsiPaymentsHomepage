@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: 'Business Automation Systems, Custom Platforms, Workflow Infrastructure',
   description:
     'Rotsi builds business automation systems, custom platforms, and workflow infrastructure for businesses that need clear, dependable execution.',
+  alternates: { canonical: '/' },
 };
 
 const services = [

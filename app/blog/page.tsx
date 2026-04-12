@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: 'Journal',
   description:
     'Practical notes from Rotsi on business automation systems, custom platforms, workflow infrastructure, and the decisions behind useful digital products.',
+  alternates: { canonical: '/blog' },
 };
 
 export default function BlogIndexPage() {

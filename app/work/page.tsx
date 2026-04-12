@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   title: 'Work | Case Studies Across Platforms And Internal Systems',
   description:
     'Browse Rotsi case studies across business automation systems, custom platforms, workflow infrastructure, and internal tools built for real operating needs.',
+  alternates: { canonical: '/work' },
 };
 
 export default function WorkPage() {

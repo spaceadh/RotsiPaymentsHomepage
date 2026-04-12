@@ -14,7 +14,6 @@ export const metadata: Metadata = {
   },
   description:
     'Rotsi builds business automation systems, custom platforms, and workflow infrastructure for teams that need serious digital execution.',
-  alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
     url: SITE_URL,
