@@ -228,13 +228,13 @@ export const projects: ProjectEntry[] = [
     heroIntro:
       'Kumbusha starts with a simple operational problem: meaningful employee milestones are easy to miss when managers are busy. The product turns those moments into a workflow that can actually be acted on.',
     image: {
-      src: '/clients-work/kumbusha/case-study.svg',
+      src: '/clients-work/kumbusha/dashboard.png',
       alt: 'Kumbusha milestone workflow concept graphic',
       dataAlt:
         'minimal product concept graphic showing milestone reminders, manager actions, and whatsapp workflow automation',
     },
     secondaryAsset: {
-      src: '/clients-work/kumbusha/case-study.svg',
+      src: '/clients-work/kumbusha/dashboard.png',
       alt: 'Kumbusha workflow diagram',
     },
     challenge: [
@@ -348,13 +348,13 @@ export const projects: ProjectEntry[] = [
     heroIntro:
       'Somafix Kenya needed a public-facing website that would do two jobs well: present the brand professionally and make product information easier to find, trust, and use.',
     image: {
-      src: '/clients-work/somfix/landing-page.png',
+      src: '/clients-work/somafix/landing-page.png',
       alt: 'Somafix Kenya website overview graphic',
       dataAlt:
         'clean website case study graphic showing product visibility, search performance, and mobile and desktop quality scores',
     },
     secondaryAsset: {
-      src: '/clients-work/somfix/landing-page.png',
+      src: '/clients-work/somafix/landing-page.png',
       alt: 'Somafix Kenya performance and SEO graphic',
     },
     challenge: [
@@ -463,13 +463,13 @@ export const projects: ProjectEntry[] = [
     heroIntro:
       'Nexus was built around a practical business problem: important customer and stock information needed to live in one controlled system instead of being scattered across people and processes.',
     image: {
-      src: '/clients-work/somafix/nexus-dashboard.svg',
+      src: '/clients-work/somafix/site-overview.png',
       alt: 'Internal platform dashboard concept for stock and customer visibility',
       dataAlt:
         'minimal operations dashboard concept showing customer records, inventory movement, permissions, and reporting',
     },
     secondaryAsset: {
-      src: '/clients-work/somafix/nexus-dashboard.svg',
+      src: '/clients-work/somafix/site-overview.png',
       alt: 'Nexus internal platform operations graphic',
     },
     challenge: [
