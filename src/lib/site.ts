@@ -1,4 +1,4 @@
-﻿export const SITE_URL = 'https://rotsi.co.ke';
+export const SITE_URL = 'https://www.rotsi.co.ke';
 export const SITE_NAME = 'Rotsi';
 export const WORDMARK_LOGO_PATH = '/brand/rotsi-wordmark-primary.svg';
 export const MONOGRAM_LOGO_PATH = '/brand/rotsi-monogram-primary.svg';
