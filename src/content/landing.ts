@@ -2,13 +2,13 @@ export const landingNavItems = [
   { href: '/', label: 'Home', active: true },
   { href: '#about', label: 'About' },
   { href: '#services', label: 'Services' },
-  { href: '#projects', label: 'Projects' },
+  { href: '/work', label: 'Projects' },
   { href: '#labs', label: 'Labs' },
   { href: '#careers', label: 'Careers' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/contact', label: 'Contact' },
 ];
 
-export const trustLogos = ['pesapal', 'm-pesa', 'dpo', 'sendy', 'JUMIA'];
+export const trustLogos = ['BEWAMA', 'SOMAFIX KENYA', 'KUMBUSHA'];
 
 export const services = [
   {
