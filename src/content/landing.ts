@@ -37,30 +37,6 @@ export const services = [
   },
 ];
 
-export const featuredLandingProjects = [
-  {
-    tag: 'Fintech',
-    title: 'Payment Reconciliation System',
-    copy: 'Automated reconciliation engine for high-volume transactions with real-time reporting.',
-    href: '/work',
-    tone: 'light',
-  },
-  {
-    tag: 'SaaS',
-    title: 'Business Operations Platform',
-    copy: 'All-in-one platform for SMEs to manage sales, inventory and customers.',
-    href: '/work',
-    tone: 'dark',
-  },
-  {
-    tag: 'Data',
-    title: 'Analytics Dashboard',
-    copy: 'Real-time analytics dashboard for tracking key business metrics and performance.',
-    href: '/work',
-    tone: 'light',
-  },
-] as const;
-
 export const aboutStats = [
   { value: '25+', label: 'Projects Delivered' },
   { value: '15+', label: 'Team Members' },

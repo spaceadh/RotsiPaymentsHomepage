@@ -22,7 +22,7 @@ export default function Button({
     className,
   );
 
-  if (href.startsWith('#')) {
+  if (href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http')) {
     return (
       <a href={href} className={classes} aria-label={ariaLabel}>
         {children}

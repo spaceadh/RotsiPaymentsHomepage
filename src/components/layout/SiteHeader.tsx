@@ -3,16 +3,26 @@ import { landingNavItems } from '../../content/landing';
 import Button from '../ui/Button';
 import Container from '../ui/Container';
 import LogoMark from '../ui/LogoMark';
-import MobileMenu from './MobileMenu';
+import MobileMenu, { type NavItem } from './MobileMenu';
 
-export default function SiteHeader() {
+type SiteHeaderProps = {
+  navItems?: NavItem[];
+  ctaHref?: string;
+  ctaLabel?: string;
+};
+
+export default function SiteHeader({
+  navItems = landingNavItems,
+  ctaHref = '#contact',
+  ctaLabel = "Let's Build Something",
+}: SiteHeaderProps) {
   return (
     <header className="sticky top-0 z-50 flex h-[86px] items-center border-b border-line/60 bg-white/85 backdrop-blur-[18px]">
       <Container className="flex items-center justify-between gap-5">
         <LogoMark />
 
         <nav className="flex items-center gap-8 max-[900px]:hidden" aria-label="Primary navigation">
-          {landingNavItems.map((item) => {
+          {navItems.map((item) => {
             const className = item.active ? 'nav-link nav-link-active' : 'nav-link';
 
             return item.href.startsWith('#') ? (
@@ -28,10 +38,10 @@ export default function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button href="#contact" className="max-sm:hidden">
-            Let&apos;s Build Something
+          <Button href={ctaHref} className="max-sm:hidden">
+            {ctaLabel}
           </Button>
-          <MobileMenu items={landingNavItems} />
+          <MobileMenu items={navItems} />
         </div>
       </Container>
     </header>
