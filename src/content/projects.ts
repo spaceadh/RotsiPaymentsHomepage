@@ -33,7 +33,7 @@ export type ProjectSeo = {
 
 export type ProjectEntry = {
   slug: string;
-  layout: 'bewama' | 'kumbusha' | 'tena' | 'somafix-site' | 'nexus';
+  layout: 'bewama' | 'kumbusha' | 'tena' | 'somafix-site' | 'ibiza';
   index: string;
   surface: 'External Platform' | 'In-Progress Venture' | 'Internal Platform';
   title: string;
@@ -552,19 +552,19 @@ export const projects: ProjectEntry[] = [
       'Rotsi builds public-facing sites that connect presentation, product clarity, and technical quality instead of treating them as separate jobs.',
   },
   {
-    slug: 'nexus-internal-platform',
-    layout: 'nexus',
+    slug: 'ibiza-internal-platform',
+    layout: 'ibiza',
     index: '05. INTERNAL PLATFORM',
     surface: 'Internal Platform',
-    title: 'Nexus - Internal Platform',
-    clientLabel: 'NEXUS',
+    title: 'IBIZA - Internal Platform',
+    clientLabel: 'IBIZA',
     subtitle: 'CUSTOM OPERATIONS PLATFORM FOR CUSTOMER RECORDS, STOCK, AND REPORTING',
-    href: '/projects/nexus-internal-platform',
+    href: '/projects/ibiza-internal-platform',
     externalUrl: 'https://crm.somafixkenya.co.ke',
     role: 'Technical Partner',
     status: 'Live Internal Platform',
     summary:
-      'Nexus is the internal platform built for Somafix to bring customer records, inventory movement, permissions, and operational visibility into one controlled environment.',
+      'IBIZA is the internal platform built for Somafix to bring customer records, inventory movement, permissions, and operational visibility into one controlled environment.',
     cardSummary:
       'An internal platform for customer continuity, inventory visibility, and permission-controlled operations in a distributor environment.',
     tags: ['Internal Platform', 'Role-Based Permissions', 'Operational Reporting'],
@@ -575,9 +575,9 @@ export const projects: ProjectEntry[] = [
       { id: 'outcome', label: 'Outcome' },
     ],
     seo: {
-      title: 'Nexus Internal Platform Case Study',
+      title: 'IBIZA Internal Platform Case Study',
       description:
-        'How Rotsi built Nexus, an internal platform for centralised customer records, inventory movement visibility, permissions, and operational reporting.',
+        'How Rotsi built IBIZA, an internal platform for centralised customer records, inventory movement visibility, permissions, and operational reporting.',
       keywords: [
         'internal platform case study',
         'inventory visibility system',
@@ -589,7 +589,7 @@ export const projects: ProjectEntry[] = [
     heroLabel: 'Case Study',
     heroTitle: 'An internal platform designed for continuity, control, and operational visibility.',
     heroIntro:
-      'Nexus was built around a practical business problem: important customer and stock information needed to live in one controlled system instead of being scattered across people and processes.',
+      'IBIZA was built around a practical business problem: important customer and stock information needed to live in one controlled system instead of being scattered across people and processes.',
     image: {
       src: '/clients-work/somafix/site-overview.png',
       alt: 'Internal platform dashboard concept for stock and customer visibility',
@@ -598,7 +598,7 @@ export const projects: ProjectEntry[] = [
     },
     secondaryAsset: {
       src: '/clients-work/somafix/site-overview.png',
-      alt: 'Nexus internal platform operations graphic',
+      alt: 'IBIZA internal platform operations graphic',
     },
     challenge: [
       'The business needed a central place for customer records so continuity would not depend on individual staff members holding information on their own.',

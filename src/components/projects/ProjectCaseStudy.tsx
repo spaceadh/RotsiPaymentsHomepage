@@ -41,7 +41,7 @@ const narrativeByLayout: Record<
     outcomeTitle: 'A stronger public presence backed by measurable quality.',
     proofTitle: 'Performance and SEO proof points from the public website.',
   },
-  nexus: {
+  ibiza: {
     challengeTitle: 'Built for continuity instead of fragmented workarounds.',
     mechanismTitle: 'Customer records, stock visibility, and permissions in one platform.',
     outcomeTitle: 'Internal control and visibility without exposing sensitive operations.',

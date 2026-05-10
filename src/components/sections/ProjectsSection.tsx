@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import { projects } from '../../content/projects';
 import Container from '../ui/Container';
-import AboutSection from './AboutSection';
-import ProjectCard from './ProjectCard';
+import ProjectsCarousel from './ProjectsCarousel';
 
 export default function ProjectsSection() {
   return (
@@ -22,13 +21,7 @@ export default function ProjectsSection() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-4 gap-6 max-[1100px]:grid-cols-2 max-[560px]:grid-cols-1">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
-        </div>
-
-        <AboutSection />
+        <ProjectsCarousel projects={projects} />
       </Container>
     </section>
   );

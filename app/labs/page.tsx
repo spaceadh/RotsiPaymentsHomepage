@@ -159,12 +159,6 @@ export default function LabsPage() {
                 <div className="mb-3 text-xs font-extrabold uppercase tracking-[0.18em] text-accent">
                   Attached Writing
                 </div>
-                <h2 className="text-[clamp(30px,3vw,44px)] font-extrabold leading-[1.1] tracking-[-0.04em] text-text">
-                  Blog posts can be tagged into Labs without duplicating content.
-                </h2>
-                <p className="mt-4 text-base leading-relaxed text-muted">
-                  Posts marked with <span className="font-bold text-text">featuredOn: labs</span> appear here automatically. The same post can also be attached to Home, Work, or a specific project.
-                </p>
               </div>
 
               <div className="grid gap-5 md:grid-cols-2">

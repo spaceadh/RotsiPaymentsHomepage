@@ -6,6 +6,7 @@ import LabsSection from '../src/components/sections/LabsSection';
 import ProjectsSection from '../src/components/sections/ProjectsSection';
 import ServicesSection from '../src/components/sections/ServicesSection';
 import TrustStrip from '../src/components/sections/TrustStrip';
+import AboutSection from '../src/components/sections/AboutSection';
 
 export const metadata: Metadata = {
   title: 'Business Automation Systems, Custom Platforms & Workflow Infrastructure',
@@ -23,6 +24,7 @@ export default function HomePage() {
         <TrustStrip />
         <ServicesSection />
         <ProjectsSection />
+        <AboutSection />
         <LabsSection />
       </main>
       <SiteFooter />

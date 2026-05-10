@@ -8,7 +8,19 @@ export const landingNavItems = [
   { href: '/contact', label: 'Contact' },
 ];
 
-export const trustLogos = ['BEWAMA', 'SOMAFIX KENYA', 'KUMBUSHA'];
+export type TrustLogo = {
+  label: string;
+  src?: string;
+  alt?: string;
+};
+
+export const trustLogos: TrustLogo[] = [
+  { label: 'BEWAMA', src: '/clients-work/bewama/logo.png' },
+  { label: 'SOMAFIX KENYA', src: '/clients-work/somafix/logo.png' },
+  { label: 'TENA CRM', src: '/clients-work/tena/logo.png' },
+  { label: 'KUMBUSHA', src: '/clients-work/kumbusha/logo.png' },
+  { label: 'IBIZA CRM', src: '/clients-work/ibiza/logo.png' },
+];
 
 export const services = [
   {
