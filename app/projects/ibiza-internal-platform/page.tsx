@@ -2,7 +2,7 @@
 import NexusCaseStudy from '../../../src/components/projects/NexusCaseStudy';
 import { getProjectBySlug } from '../../../src/content/projects';
 
-const project = getProjectBySlug('nexus-internal-platform');
+const project = getProjectBySlug('ibiza-internal-platform');
 
 if (!project) {
   throw new Error('Missing Nexus project entry');

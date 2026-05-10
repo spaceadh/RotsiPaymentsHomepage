@@ -104,7 +104,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Internal Platforms',
     tags: ['Internal Tools', 'Inventory', 'Permissions', 'Operational Reporting'],
     featuredOn: ['labs', 'work'],
-    relatedProjects: ['nexus-internal-platform'],
+    relatedProjects: ['ibiza-internal-platform'],
     keywords: [
       'internal platform for inventory',
       'customer records system',
