@@ -33,6 +33,9 @@ export default function BlogIndexPage() {
             <Link className="nav-link" href="/work">
               Work
             </Link>
+            <Link className="nav-link" href="/labs">
+              Labs
+            </Link>
             <Link className="nav-link nav-link-active font-bold" href="/blog">
               Journal
             </Link>
@@ -130,6 +133,16 @@ export default function BlogIndexPage() {
                         {post.title}
                       </h2>
                       <p className="body-copy mt-5 text-base text-secondary">{post.description}</p>
+                      <div className="mt-6 flex flex-wrap gap-2">
+                        {post.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="rounded-full border border-black/10 px-3 py-1 font-label text-[0.65rem] font-bold uppercase tracking-[0.18em] text-secondary"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
                     </div>
 
                     <div className="mt-10 border-t border-black/5 pt-6">

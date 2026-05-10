@@ -74,7 +74,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <header className="fixed top-0 z-50 w-full border-b border-black/5 bg-background/78 backdrop-blur-2xl shadow-[0_20px_50px_rgba(15,23,42,0.04)]">
         <div className="mx-auto flex max-w-[1440px] items-center justify-between px-8 py-6 md:px-12">
           <Link href="/" className="inline-flex w-[132px] text-primary sm:w-[152px]" aria-label="Rotsi home">
-            <RotsiLogo className="block w-full" kind="wordmark" title="Rotsi wordmark" />
+            <RotsiLogo className="block w-full" kind="wordmark" title="Rotsi Logo" />
           </Link>
           <nav className="hidden items-center gap-12 md:flex">
             <Link className="nav-link" href="/#services">
@@ -82,6 +82,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </Link>
             <Link className="nav-link" href="/work">
               Work
+            </Link>
+            <Link className="nav-link" href="/labs">
+              Labs
             </Link>
             <Link className="nav-link nav-link-active font-bold" href="/blog">
               Journal
@@ -125,6 +128,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <p className="body-copy mt-8 max-w-3xl text-lg text-secondary md:text-xl">
                 {post.description}
               </p>
+              <div className="mt-8 flex flex-wrap gap-2">
+                {post.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-black/10 px-3 py-1 font-label text-[0.65rem] font-bold uppercase tracking-[0.18em] text-secondary"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </MotionReveal>
 

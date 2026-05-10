@@ -142,7 +142,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <button className="button-primary w-full sm:w-auto" type="submit">
-                  Send Inquiry →
+                  Send Inquiry -&gt;
                 </button>
               </form>
             </div>

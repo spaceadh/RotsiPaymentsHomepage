@@ -4,7 +4,7 @@ import { absoluteUrl } from '../src/lib/site';
 
 export default function sitemap() {
   const now = new Date();
-  const staticRoutes = ['/', '/contact', '/work', '/blog'];
+  const staticRoutes = ['/', '/contact', '/work', '/labs', '/blog'];
   const projectRoutes = projects.map((project) => project.href);
   const blogRoutes = getAllPosts().map((post) => `/blog/${post.slug}`);
 

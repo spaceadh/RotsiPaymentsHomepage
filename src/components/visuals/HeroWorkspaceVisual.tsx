@@ -1,4 +1,4 @@
-const nodes = ['API → PAYMENT', 'DATABASE', 'USER → DASHBOARD'];
+const nodes = ['API -> PAYMENT', 'DATABASE', 'USER -> DASHBOARD'];
 
 export default function HeroWorkspaceVisual() {
   return (

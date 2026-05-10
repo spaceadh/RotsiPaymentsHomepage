@@ -34,12 +34,12 @@ export default function MobileMenu({ items }: MobileMenuProps) {
     <div className="min-[901px]:hidden">
       <button
         type="button"
-        className="grid h-11 w-11 place-items-center rounded-[10px] border border-line bg-white text-xl font-bold text-text"
+        className="grid h-11 w-11 place-items-center rounded-[10px] border border-line bg-white text-sm font-bold uppercase tracking-[0.08em] text-text"
         aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
         aria-expanded={open}
         onClick={() => setOpen((value) => !value)}
       >
-        {open ? '×' : '≡'}
+        {open ? 'x' : 'menu'}
       </button>
 
       {open ? (
@@ -57,7 +57,7 @@ export default function MobileMenu({ items }: MobileMenuProps) {
                     onClick={() => setOpen(false)}
                   >
                     <span>{item.label}</span>
-                    <span aria-hidden="true">→</span>
+                    <span aria-hidden="true">-&gt;</span>
                   </Link>
                 </li>
               ))}

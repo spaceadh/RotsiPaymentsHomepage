@@ -5,6 +5,7 @@
 @tailwind utilities;
 
 :root {
+  --font-inter: Inter, system-ui, sans-serif;
   --bg: #ffffff;
   --surface: #f7f4ef;
   --surface-2: #fbfaf8;

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import SiteFooter from '../src/components/layout/SiteFooter';
 import SiteHeader from '../src/components/layout/SiteHeader';
 import HeroSection from '../src/components/sections/HeroSection';
+import LabsSection from '../src/components/sections/LabsSection';
 import ProjectsSection from '../src/components/sections/ProjectsSection';
 import ServicesSection from '../src/components/sections/ServicesSection';
 import TrustStrip from '../src/components/sections/TrustStrip';
@@ -22,6 +23,7 @@ export default function HomePage() {
         <TrustStrip />
         <ServicesSection />
         <ProjectsSection />
+        <LabsSection />
       </main>
       <SiteFooter />
     </>

@@ -1,9 +1,6 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
 import { SITE_NAME, SITE_URL, organizationJsonLd } from '../src/lib/site';
-
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -31,7 +28,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} bg-background font-body antialiased`}>
+      <body className="bg-background font-body antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}

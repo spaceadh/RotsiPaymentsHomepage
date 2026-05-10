@@ -33,7 +33,7 @@ export type ProjectSeo = {
 
 export type ProjectEntry = {
   slug: string;
-  layout: 'bewama' | 'kumbusha' | 'somafix-site' | 'nexus';
+  layout: 'bewama' | 'kumbusha' | 'tena' | 'somafix-site' | 'nexus';
   index: string;
   surface: 'External Platform' | 'In-Progress Venture' | 'Internal Platform';
   title: string;
@@ -310,9 +310,135 @@ export const projects: ProjectEntry[] = [
       'Rotsi helps turn rough product ideas into structured systems with usable workflows, clean logic, and room to validate in the real market.',
   },
   {
+    slug: 'tena-crm',
+    layout: 'tena',
+    index: '03. SERVICE CRM',
+    surface: 'External Platform',
+    title: 'Tena CRM',
+    clientLabel: 'TENA CRM',
+    subtitle: 'BOOKING AND CLIENT RETENTION PLATFORM FOR SERVICE BUSINESSES',
+    href: '/projects/tena-crm',
+    externalUrl: 'https://crm.rotsi.co.ke',
+    role: 'Product Builder',
+    status: 'Completed',
+    summary:
+      'Tena is a client-retention and booking platform for appointment-based service businesses. It combines CRM, booking management, WhatsApp-ready follow-ups, public booking pages, and business insights so service teams can reduce missed appointments and increase repeat visits.',
+    cardSummary:
+      'A booking and customer-retention platform for salons, spas, barbershops, clinics, and appointment-based teams that need cleaner client tracking and repeat booking workflows.',
+    tags: ['Service CRM', 'Booking Workflows', 'WhatsApp Follow-Up'],
+    sections: [
+      { id: 'problem', label: 'Problem' },
+      { id: 'system', label: 'System' },
+      { id: 'retention', label: 'Retention' },
+      { id: 'proof', label: 'Proof' },
+    ],
+    seo: {
+      title: 'Tena CRM | Booking And Client Retention Platform For Service Businesses',
+      description:
+        'Tena helps salons, spas, barbershops, clinics, and appointment-based teams manage clients, bookings, WhatsApp follow-ups, public booking pages, and repeat-customer insights.',
+      keywords: [
+        'CRM for salons',
+        'booking system for salons and spas',
+        'client retention software',
+        'WhatsApp booking reminders',
+        'appointment management system',
+        'CRM for service businesses',
+      ],
+    },
+    heroLabel: 'Completed Platform',
+    heroTitle: 'A booking and client-retention platform built for service businesses that depend on repeat visits.',
+    heroIntro:
+      'Tena gives appointment-based teams one workspace for clients, bookings, services, WhatsApp-ready follow-ups, public booking pages, and simple business insights.',
+    image: {
+      src: '/clients-work/tena/site-overview.png',
+      alt: 'Tena CRM booking and client retention dashboard concept',
+      dataAlt:
+        'clean service CRM dashboard concept showing bookings, clients, WhatsApp follow-ups, and retention signals',
+    },
+    secondaryAsset: {
+      src: '/clients-work/tena/site-overview.png',
+      alt: 'Tena CRM service business workflow concept',
+    },
+    challenge: [
+      'Service businesses often depend on repeat customers, but customer history and appointment follow-up are scattered across WhatsApp chats, notebooks, spreadsheets, and memory.',
+      'Missed follow-ups, missed bookings, no-shows, and weak customer tracking quietly reduce revenue even when the business already has demand.',
+      'The system needed to be lighter than an enterprise platform but more serious than a manual chat-and-spreadsheet workflow.',
+    ],
+    mechanisms: [
+      {
+        title: 'Client CRM',
+        description:
+          'Tena centralizes names, contact details, segments, notes, consent, and activity history so the business can understand each customer beyond a single booking.',
+      },
+      {
+        title: 'Booking management',
+        description:
+          'Services, staff assignment, calendar views, queue handling, statuses, and no-show tracking give teams a clearer view of daily appointment activity.',
+      },
+      {
+        title: 'Public booking page',
+        description:
+          'Customers can view services and request appointments online, giving the business a cleaner intake flow than manual WhatsApp-only booking.',
+      },
+      {
+        title: 'WhatsApp-ready follow-up',
+        description:
+          'The product is shaped around reminders, nudges, broadcasts, and provider setup support so customer communication can connect back into the retention workflow.',
+      },
+      {
+        title: 'Operational insights',
+        description:
+          'Dashboards surface repeat customers, single-visit clients, no-shows, service performance, and revenue signals so owners can act on customer activity faster.',
+      },
+    ],
+    outcomes: [
+      {
+        title: 'Cleaner customer continuity',
+        description:
+          'Client history and booking context live in one workspace instead of being scattered across staff phones and manual records.',
+      },
+      {
+        title: 'Stronger repeat-booking workflow',
+        description:
+          'The platform helps owners see who is booked, who missed an appointment, who should be followed up, and which customers are likely to return.',
+      },
+      {
+        title: 'A scalable service-business foundation',
+        description:
+          'The Next.js, TypeScript, Supabase, and Tailwind architecture gives the product room to grow into a broader multi-business SaaS platform.',
+      },
+    ],
+    proofPoints: [
+      'Client CRM for service-business records',
+      'Booking management and public booking page',
+      'WhatsApp-ready reminders, nudges, and broadcasts',
+      'Insights for repeat customers, no-shows, service performance, and revenue signals',
+    ],
+    metrics: [
+      {
+        value: '1',
+        label: 'Workspace',
+        detail: 'Clients, bookings, services, follow-ups, and insights live together.',
+      },
+      {
+        value: '24/7',
+        label: 'Booking Surface',
+        detail: 'Public booking pages let customers request appointments outside manual chat cycles.',
+      },
+      {
+        value: 'CRM',
+        label: 'Retention Layer',
+        detail: 'Customer history, segments, and follow-up signals support repeat visits.',
+      },
+    ],
+    ctaTitle: 'Need a service platform that does more than collect bookings?',
+    ctaDescription:
+      'Rotsi builds CRM, booking, and retention systems that help service teams manage customers, follow-ups, and repeat revenue in one workflow.',
+  },
+  {
     slug: 'somafix-kenya',
     layout: 'somafix-site',
-    index: '03. BRAND AND SEO',
+    index: '04. BRAND AND SEO',
     surface: 'External Platform',
     title: 'Somafix Kenya Website',
     clientLabel: 'SOMAFIX KENYA',
@@ -428,7 +554,7 @@ export const projects: ProjectEntry[] = [
   {
     slug: 'nexus-internal-platform',
     layout: 'nexus',
-    index: '04. INTERNAL PLATFORM',
+    index: '05. INTERNAL PLATFORM',
     surface: 'Internal Platform',
     title: 'Nexus - Internal Platform',
     clientLabel: 'NEXUS',

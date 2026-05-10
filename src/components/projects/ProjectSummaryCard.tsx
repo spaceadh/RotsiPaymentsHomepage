@@ -46,7 +46,7 @@ export default function ProjectSummaryCard({
           {project.title}
         </h3>
         <p className={cn('mt-3 text-muted', isLarge ? 'text-base' : 'text-sm')}>{project.cardSummary}</p>
-        <span className="learn-link mt-6 inline-flex">View case study -→</span>
+        <span className="learn-link mt-6 inline-flex">View case study -&gt;</span>
       </div>
     </Link>
   );

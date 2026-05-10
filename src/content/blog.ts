@@ -1,10 +1,15 @@
-﻿export type BlogPost = {
+export type BlogSurface = 'home' | 'labs' | 'work';
+
+export type BlogPost = {
   slug: string;
   title: string;
   description: string;
   publishedAt: string;
   readingTime: string;
   category: string;
+  tags: string[];
+  featuredOn?: BlogSurface[];
+  relatedProjects?: string[];
   keywords: string[];
   content: string[];
 };
@@ -18,6 +23,9 @@ export const blogPosts: BlogPost[] = [
     publishedAt: '2026-03-29',
     readingTime: '6 min read',
     category: 'Ecommerce Systems',
+    tags: ['B2B Ecommerce', 'Product SEO', 'Checkout', 'Supplier Platforms'],
+    featuredOn: ['home', 'labs', 'work'],
+    relatedProjects: ['bewama'],
     keywords: [
       'B2B ecommerce platform',
       'construction materials ecommerce',
@@ -39,6 +47,9 @@ export const blogPosts: BlogPost[] = [
     publishedAt: '2026-03-25',
     readingTime: '7 min read',
     category: 'Workflow Automation',
+    tags: ['WhatsApp', 'Automation', 'Bookings', 'Customer Routing'],
+    featuredOn: ['home', 'labs'],
+    relatedProjects: ['kumbusha', 'tena-crm'],
     keywords: [
       'WhatsApp workflow automation',
       'WhatsApp booking system',
@@ -60,6 +71,9 @@ export const blogPosts: BlogPost[] = [
     publishedAt: '2026-03-21',
     readingTime: '5 min read',
     category: 'Internal Platforms',
+    tags: ['Internal Tools', 'Inventory', 'Permissions', 'Operational Reporting'],
+    featuredOn: ['labs', 'work'],
+    relatedProjects: ['nexus-internal-platform'],
     keywords: [
       'internal platform for inventory',
       'customer records system',
@@ -83,6 +97,22 @@ export function getPostBySlug(slug: string) {
   return blogPosts.find((post) => post.slug === slug);
 }
 
+export function getPostsByTag(tag: string) {
+  const normalizedTag = tag.toLowerCase();
+
+  return getAllPosts().filter((post) =>
+    post.tags.some((postTag) => postTag.toLowerCase() === normalizedTag),
+  );
+}
+
+export function getFeaturedPosts(surface: BlogSurface) {
+  return getAllPosts().filter((post) => post.featuredOn?.includes(surface));
+}
+
+export function getPostsForProject(projectSlug: string) {
+  return getAllPosts().filter((post) => post.relatedProjects?.includes(projectSlug));
+}
+
 export function formatBlogDate(date: string, locale = 'en-US') {
   return new Intl.DateTimeFormat(locale, {
     year: 'numeric',
@@ -90,4 +120,3 @@ export function formatBlogDate(date: string, locale = 'en-US') {
     day: 'numeric',
   }).format(new Date(date));
 }
-

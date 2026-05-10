@@ -16,9 +16,9 @@ export default function HeroSection() {
             and digital products for Africa and the world.
           </p>
           <div className="flex items-center gap-[18px] max-[560px]:flex-col max-[560px]:items-start">
-            <Button href="#projects">Explore Our Work →</Button>
+            <Button href="#projects">Explore Our Work -&gt;</Button>
             <Button href="#contact" variant="secondary">
-              Work With Us →
+              Work With Us -&gt;
             </Button>
           </div>
         </div>

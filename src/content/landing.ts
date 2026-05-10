@@ -3,7 +3,7 @@ export const landingNavItems = [
   { href: '#about', label: 'About' },
   { href: '#services', label: 'Services' },
   { href: '/work', label: 'Projects' },
-  { href: '#labs', label: 'Labs' },
+  { href: '/labs', label: 'Labs' },
   { href: '#careers', label: 'Careers' },
   { href: '/contact', label: 'Contact' },
 ];

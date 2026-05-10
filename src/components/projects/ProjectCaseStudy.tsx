@@ -29,6 +29,12 @@ const narrativeByLayout: Record<
     outcomeTitle: 'Turning good intent into a repeatable people workflow.',
     proofTitle: 'Validation signals without overstating an in-progress product.',
   },
+  tena: {
+    challengeTitle: 'Service businesses lose revenue when customer follow-up lives in scattered tools.',
+    mechanismTitle: 'CRM, booking workflows, public intake, and WhatsApp-ready follow-up in one platform.',
+    outcomeTitle: 'A clearer operating layer for repeat visits and customer retention.',
+    proofTitle: 'Completed platform capabilities anchored in service-business workflows.',
+  },
   'somafix-site': {
     challengeTitle: 'A website project with brand and search goals attached to it.',
     mechanismTitle: 'Branding, product presentation, and technical quality in one build.',
@@ -185,7 +191,7 @@ export default function ProjectCaseStudy({ project }: ProjectCaseStudyProps) {
                 target="_blank"
                 rel="noreferrer"
               >
-                Visit live project -→
+                Visit live project -&gt;
               </Link>
             ) : null}
           </div>
