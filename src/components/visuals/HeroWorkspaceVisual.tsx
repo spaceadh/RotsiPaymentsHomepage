@@ -14,7 +14,6 @@ export default function HeroWorkspaceVisual() {
           </div>
         ))}
       </div>
-      {/* <div className="relative h-[210px] w-[68%] rounded-t-[18px] rounded-b-lg bg-[#111] shadow-soft before:absolute before:inset-3.5 before:rounded-[10px] before:bg-[repeating-linear-gradient(180deg,#2d6cdf_0_2px,transparent_2px_17px),linear-gradient(90deg,#151515,#242424)] before:opacity-75 after:absolute after:-bottom-[26px] after:left-[20%] after:right-[20%] after:h-[26px] after:bg-[#b7b7b7] after:[clip-path:polygon(12%_0,88%_0,100%_100%,0_100%)] max-sm:h-[170px] max-sm:w-[74%]" /> */}
     </div>
   );
 }
