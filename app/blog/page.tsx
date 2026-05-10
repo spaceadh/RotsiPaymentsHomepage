@@ -27,7 +27,7 @@ export default function BlogIndexPage() {
             <RotsiLogo className="block w-full" kind="wordmark" title="Rotsi wordmark" />
           </Link>
           <nav className="hidden items-center gap-12 md:flex">
-            <Link className="nav-link" href="/#services">
+            <Link className="nav-link" href="/services">
               Services
             </Link>
             <Link className="nav-link" href="/work">

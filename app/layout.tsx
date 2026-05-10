@@ -1,6 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { SITE_NAME, SITE_URL, organizationJsonLd } from '../src/lib/site';
+import { SITE_NAME, SITE_URL, organizationJsonLd, websiteJsonLd } from '../src/lib/site';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -32,6 +32,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
         {children}
       </body>

@@ -20,6 +20,13 @@ export const organizationJsonLd = {
   },
 };
 
+export const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: SITE_NAME,
+  url: SITE_URL,
+};
+
 export function absoluteUrl(path: string) {
   return new URL(path, SITE_URL).toString();
 }

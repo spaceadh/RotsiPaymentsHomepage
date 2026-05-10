@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 
 const labsNavItems = [
   { href: '/', label: 'Home' },
+  { href: '/services', label: 'Services' },
   { href: '#open-source', label: 'Open Source' },
   { href: '#notes', label: 'Notes' },
   { href: '#writing', label: 'Writing' },

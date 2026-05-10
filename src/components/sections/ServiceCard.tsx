@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import type { services } from '../../content/landing';
 import Card from '../ui/Card';
 
@@ -70,9 +71,9 @@ export default function ServiceCard({ service }: ServiceCardProps) {
         {service.title}
       </h3>
       <p className="mb-[22px] text-sm text-muted">{service.copy}</p>
-      <a className="learn-link" href={service.href}>
+      <Link className="learn-link" href={service.href}>
         Learn more -&gt;
-      </a>
+      </Link>
     </Card>
   );
 }

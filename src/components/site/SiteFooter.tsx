@@ -2,7 +2,7 @@ import Link from 'next/link';
 import RotsiLogo from '../brand/RotsiLogo';
 
 type SiteFooterProps = {
-  active?: 'work' | 'blog' | 'contact';
+  active?: 'services' | 'work' | 'blog' | 'contact';
 };
 
 export default function SiteFooter({ active }: SiteFooterProps) {
@@ -18,7 +18,7 @@ export default function SiteFooter({ active }: SiteFooterProps) {
           <RotsiLogo className="block w-full" kind="wordmark" title="Rotsi wordmark" />
         </div>
         <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-          <Link className={footerLinkClass()} href="/#services">
+          <Link className={footerLinkClass('services')} href="/services">
             Services
           </Link>
           <Link className={footerLinkClass('work')} href="/work">

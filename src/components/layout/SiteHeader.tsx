@@ -13,7 +13,7 @@ type SiteHeaderProps = {
 
 export default function SiteHeader({
   navItems = landingNavItems,
-  ctaHref = '#contact',
+  ctaHref = '/contact',
   ctaLabel = "Let's Build Something",
 }: SiteHeaderProps) {
   return (

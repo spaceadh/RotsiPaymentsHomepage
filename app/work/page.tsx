@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 
 const workNavItems = [
   { href: '/', label: 'Home' },
+  { href: '/services', label: 'Services' },
   { href: '#external-platforms', label: 'External' },
   { href: '#internal-platforms', label: 'Internal' },
   { href: '#ventures', label: 'Ventures' },
@@ -131,7 +132,7 @@ export default function WorkPage() {
           />
         </div>
       </main>
-      <SiteFooter />
+      <SiteFooter active="work" />
     </>
   );
 }

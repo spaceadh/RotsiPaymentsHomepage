@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const contactNavItems = [
   { href: '/', label: 'Home' },
-  { href: '/#services', label: 'Services' },
+  { href: '/services', label: 'Services' },
   { href: '/work', label: 'Work' },
   { href: '/blog', label: 'Journal' },
   { href: '/contact', label: 'Contact', active: true },
@@ -149,7 +149,7 @@ export default function ContactPage() {
           </Container>
         </section>
       </main>
-      <SiteFooter />
+      <SiteFooter active="contact" />
     </>
   );
 }
