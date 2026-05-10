@@ -8,23 +8,23 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} | Systems, People, Impact`,
+    default: `${SITE_NAME} | Business Automation Systems, Custom Platforms & Workflow Infrastructure`,
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    'Rotsi Labs is a product and systems studio building fintech solutions, automation tools, and digital products for Africa and the world.',
+    'Rotsi builds business automation systems, custom platforms, ecommerce workflows, CRM tools, and internal operations software for growing businesses.',
   openGraph: {
     type: 'website',
     url: SITE_URL,
-    title: `${SITE_NAME} | Systems, People, Impact`,
+    title: `${SITE_NAME} | Business Automation Systems, Custom Platforms & Workflow Infrastructure`,
     description:
-      'Rotsi Labs builds systems that solve real business problems across fintech, automation, data, and digital products.',
+      'Rotsi builds practical software systems for ecommerce, CRM, workflow automation, internal operations, and business growth.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${SITE_NAME} | Systems, People, Impact`,
+    title: `${SITE_NAME} | Business Automation Systems, Custom Platforms & Workflow Infrastructure`,
     description:
-      'Rotsi Labs builds systems that solve real business problems across fintech, automation, data, and digital products.',
+      'Rotsi builds practical software systems for ecommerce, CRM, workflow automation, internal operations, and business growth.',
   },
 };
 

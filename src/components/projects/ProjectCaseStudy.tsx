@@ -185,7 +185,7 @@ export default function ProjectCaseStudy({ project }: ProjectCaseStudyProps) {
                 target="_blank"
                 rel="noreferrer"
               >
-                Visit live project →
+                Visit live project -→
               </Link>
             ) : null}
           </div>

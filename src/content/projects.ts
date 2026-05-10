@@ -70,16 +70,16 @@ export const projects: ProjectEntry[] = [
     surface: 'External Platform',
     title: 'Bewama',
     clientLabel: 'BEWAMA',
-    subtitle: 'B2B COMMERCE FOR CONSTRUCTION, INDUSTRIAL, AND CHEMICAL MATERIALS',
+    subtitle: 'B2B ECOMMERCE AND QUOTING FOR INDUSTRIAL SUPPLIERS',
     href: '/projects/bewama',
     externalUrl: 'https://bewama.com',
     role: 'Technical Partner',
     status: 'Live Platform',
     summary:
-      'Bewama is a B2B commerce platform built for construction, industrial, and chemical buying. Rotsi supports the venture as the technical partner across product design, system design, architecture, SEO, and conversion workflows.',
+      'Bewama is a B2B ecommerce and sourcing platform for construction, industrial, chemical, timber, adhesive, and hardware-related products. Rotsi supports the venture across product design, system design, architecture, SEO, checkout workflows, quoting, and customer retention.',
     cardSummary:
-      'A B2B commerce system designed to attract search demand, guide buying decisions, recover intent, and support repeat purchasing in a category where product clarity matters.',
-    tags: ['B2B Commerce', 'SEO Content Engine', 'Abandoned Cart Recovery'],
+      'A B2B ecommerce and quoting system designed to support product discovery, assisted buying, checkout, loyalty points, and repeat purchasing for a serious product business.',
+    tags: ['B2B Ecommerce', 'Quote Requests', 'Loyalty Mechanics'],
     sections: [
       { id: 'challenge', label: 'Challenge' },
       { id: 'mechanisms', label: 'Mechanisms' },
@@ -87,21 +87,22 @@ export const projects: ProjectEntry[] = [
       { id: 'proof', label: 'Proof' },
     ],
     seo: {
-      title: 'Bewama Case Study',
+      title: 'Bewama | B2B Ecommerce And Quoting Platform For Industrial Suppliers',
       description:
-        'How Rotsi partnered on Bewama, a B2B commerce platform for construction and industrial materials, with SEO, cart recovery, loyalty mechanics, and growth systems.',
+        'Bewama is a B2B ecommerce and sourcing platform for construction, industrial, chemical, timber, adhesive, and hardware suppliers that need catalog, checkout, quote, and admin workflows.',
       keywords: [
-        'B2B ecommerce case study Kenya',
+        'B2B ecommerce platform',
         'construction materials ecommerce platform',
-        'industrial products SEO',
-        'abandoned cart recovery ecommerce',
+        'industrial products website',
+        'quote request ecommerce platform',
+        'ecommerce platform for suppliers',
         'loyalty points system ecommerce',
       ],
     },
     heroLabel: 'Case Study',
-    heroTitle: 'A commerce platform built to drive search visibility, buyer confidence, and repeat purchasing.',
+    heroTitle: 'A B2B ecommerce platform built for product discovery, quoting, checkout, and repeat purchasing.',
     heroIntro:
-      'Bewama needed more than an online store. It needed a platform that could handle category depth, support serious buying journeys, and turn traffic into repeatable sales activity.',
+      'Bewama needed more than an online shop. It needed a structured digital sales system where buyers could browse products, request quotes, place orders, earn points, receive updates, and come back for future purchases.',
     image: {
       src: '/clients-work/bewama/landing-page.png',
       alt: 'Bewama storefront interface on desktop',
@@ -113,15 +114,15 @@ export const projects: ProjectEntry[] = [
       alt: 'Bewama project screenshot',
     },
     challenge: [
-      'The business needed a digital sales surface that could serve contractors, hardware shops, mafundi, and self-service home repair buyers without feeling confusing or thin.',
-      'The product mix was broad, technical, and search-driven, so the site had to support both discovery and trust. Standard e-commerce patterns were not enough on their own.',
-      'The platform also needed a stronger commercial engine behind the interface: search visibility, re-engagement, and mechanisms that encouraged users to come back and buy again.',
+      'The business needed a digital sales surface for customers who may need either instant buying or assisted quoting.',
+      'The product mix was broad and technical, covering construction, industrial, chemical, timber, adhesive, and hardware-related products. Standard ecommerce patterns were not enough on their own.',
+      'The platform also needed a stronger commercial engine behind the interface: product content, quote handling, checkout configuration, loyalty points, and mechanisms that encouraged customers to return.',
     ],
     mechanisms: [
       {
         title: 'Product and system design',
         description:
-          'Rotsi handled the UI direction, software design, and system architecture so the platform could support a structured buying journey from discovery to checkout.',
+          'Rotsi handled UI direction, software design, and system architecture so the platform could support a structured journey from catalog browsing to quoting, checkout, and repeat engagement.',
       },
       {
         title: 'Abandoned cart recovery',
@@ -131,12 +132,12 @@ export const projects: ProjectEntry[] = [
       {
         title: 'Loyalty mechanics',
         description:
-          'A points system was designed around actions that matter commercially: account creation, referrals, purchases, reviews, user-generated proof, and repeated logins.',
+          'A points system was designed around actions that matter commercially: account creation, referrals, purchases, reviews, customer proof, and repeated logins.',
       },
       {
         title: 'SEO content engine',
         description:
-          'Product pages and blog content were structured around search visibility so Bewama could compete on commercial queries and educational queries at the same time.',
+          'Product pages and resource content were structured around search visibility so Bewama could support commercial lookup behavior and buyer education at the same time.',
       },
       {
         title: 'Social entry automation',
@@ -184,7 +185,7 @@ export const projects: ProjectEntry[] = [
         detail: 'Technical and on-page SEO maintained at a high standard.',
       },
     ],
-    ctaTitle: 'Need a commerce system that does more than list products?',
+    ctaTitle: 'Need an ecommerce system that does more than list products?',
     ctaDescription:
       'Rotsi helps businesses build platforms that connect search visibility, buying flows, and operational follow-through.',
   },
@@ -192,19 +193,19 @@ export const projects: ProjectEntry[] = [
     slug: 'kumbusha',
     layout: 'kumbusha',
     index: '02. CULTURE WORKFLOWS',
-    surface: 'In-Progress Venture',
+    surface: 'External Platform',
     title: 'Kumbusha',
     clientLabel: 'KUMBUSHA',
     subtitle: 'MILESTONE REMINDERS AND CULTURE WORKFLOWS FOR TEAMS',
     href: '/projects/kumbusha',
     externalUrl: 'https://kumbusha.vercel.app/',
     role: 'Product Builder',
-    status: 'In Progress',
+    status: 'Completed',
     summary:
-      'Kumbusha is an in-progress venture focused on helping managers act on employee milestones with less friction. The product turns birthdays, anniversaries, and related moments into manageable workflows instead of forgotten good intentions.',
+      'Kumbusha is an External Platform focused on helping managers act on employee milestones with less friction. The product turns birthdays, anniversaries, and related moments into manageable workflows instead of forgotten good intentions.',
     cardSummary:
       'An in-progress culture workflow product that helps managers stay ahead of employee milestones and act on them through reminders, quick actions, and vendor coordination.',
-    tags: ['In-Progress Venture', 'WhatsApp Automation', 'Culture Workflows'],
+    tags: ['External Platform', 'WhatsApp Automation', 'Culture Workflows'],
     sections: [
       { id: 'problem', label: 'Problem' },
       { id: 'workflow', label: 'Workflow' },
@@ -214,7 +215,7 @@ export const projects: ProjectEntry[] = [
     seo: {
       title: 'Kumbusha Case Study',
       description:
-        'How Rotsi is building Kumbusha, an in-progress venture for employee milestone reminders, manager actions, and culture workflows supported by WhatsApp automation.',
+        'How Rotsi is building Kumbusha, an External Platform for employee milestone reminders, manager actions, and culture workflows supported by WhatsApp automation.',
       keywords: [
         'employee milestone reminder system',
         'WhatsApp reminder workflow for managers',
@@ -223,7 +224,7 @@ export const projects: ProjectEntry[] = [
         'employee appreciation automation',
       ],
     },
-    heroLabel: 'In-Progress Venture',
+    heroLabel: 'External Platform',
     heroTitle: 'A culture workflow product built around moments managers often remember too late.',
     heroIntro:
       'Kumbusha starts with a simple operational problem: meaningful employee milestones are easy to miss when managers are busy. The product turns those moments into a workflow that can actually be acted on.',
@@ -282,7 +283,7 @@ export const projects: ProjectEntry[] = [
       },
     ],
     proofPoints: [
-      'In-progress venture with working workflow direction',
+      'External Platform with working workflow direction',
       'Vendor onboarding has already started',
       'Built around WhatsApp-based reminder and action flows',
       'Next phase focuses on company outreach and validation',
@@ -315,16 +316,16 @@ export const projects: ProjectEntry[] = [
     surface: 'External Platform',
     title: 'Somafix Kenya Website',
     clientLabel: 'SOMAFIX KENYA',
-    subtitle: 'DIGITAL BRAND PRESENCE FOR A SILICONE DISTRIBUTOR',
+    subtitle: 'CONSTRUCTION CHEMICALS WEBSITE FOR PRODUCT CLARITY AND SEARCH',
     href: '/projects/somafix-kenya',
     externalUrl: 'https://somafixkenya.co.ke',
     role: 'Technical Partner',
     status: 'Live Website',
     summary:
-      'For Somafix Kenya, the public-facing website was not only a design exercise. It was a brand visibility and product-clarity project shaped around SEO, performance, and trust.',
+      'Somafix Kenya is a Nairobi-based supplier of industrial-grade construction chemicals. The public-facing website was built to present the brand professionally, organize product information, and support search visibility for professional buyers.',
     cardSummary:
-      'A distributor website built to improve brand recognition, present products clearly, and maintain strong technical scores across mobile and desktop.',
-    tags: ['Brand Website', 'Technical SEO', 'Performance'],
+      'A construction chemicals website built to improve product clarity, brand recognition, search readiness, and technical quality across mobile and desktop.',
+    tags: ['Construction Chemicals', 'Product SEO', 'Performance'],
     sections: [
       { id: 'brief', label: 'Brief' },
       { id: 'execution', label: 'Execution' },
@@ -332,21 +333,22 @@ export const projects: ProjectEntry[] = [
       { id: 'impact', label: 'Impact' },
     ],
     seo: {
-      title: 'Somafix Kenya Website Case Study',
+      title: 'Somafix Kenya | Construction Chemicals SEO And Product Website',
       description:
-        'How Rotsi helped Somafix Kenya improve digital brand recognition through a product-focused website, stronger SEO structure, and high technical performance.',
+        'How Rotsi built a product-focused website for Somafix Kenya, a Nairobi supplier of construction chemicals, sealants, adhesives, PU foams, aerosols, and application tools.',
       keywords: [
-        'distributor website case study',
+        'construction chemicals Kenya',
+        'silicone sealants Kenya',
+        'industrial adhesives Nairobi',
+        'PU foam Kenya',
+        'construction sealants East Africa',
         'product SEO website',
-        'website performance optimization Kenya',
-        'silicone distributor website',
-        'brand website for industrial products',
       ],
     },
     heroLabel: 'Case Study',
-    heroTitle: 'A distributor website designed to strengthen brand recognition and product discoverability.',
+    heroTitle: 'A construction chemicals website designed for product clarity, trust, and search visibility.',
     heroIntro:
-      'Somafix Kenya needed a public-facing website that would do two jobs well: present the brand professionally and make product information easier to find, trust, and use.',
+      'Somafix Kenya needed a public-facing website that would present the brand professionally and help contractors, installers, engineers, and B2B buyers find reliable product information.',
     image: {
       src: '/clients-work/somafix/landing-page.png',
       alt: 'Somafix Kenya website overview graphic',
@@ -358,20 +360,20 @@ export const projects: ProjectEntry[] = [
       alt: 'Somafix Kenya performance and SEO graphic',
     },
     challenge: [
-      'The project started with a straightforward need for a website, but the real opportunity was broader. The brand needed stronger digital recognition and a more deliberate product presence.',
-      'That meant the site had to balance branding, product clarity, SEO, and technical quality instead of over-prioritising one at the expense of the others.',
-      'The public site also had to perform well on the devices customers actually use, especially mobile.',
+      'The project started with a straightforward need for a website, but the real opportunity was broader: clearer product presentation for a technical construction chemicals supplier.',
+      'The site had to balance branding, product categories, use-case clarity, SEO, and technical quality instead of treating the website as a simple brochure.',
+      'The public site also had to perform well for the devices customers actually use, especially mobile.',
     ],
     mechanisms: [
       {
         title: 'Brand-led web design',
         description:
-          'The site was designed to strengthen how Somafix Kenya shows up online while staying grounded in product information and use-case clarity.',
+          'The site was designed to strengthen how Somafix Kenya shows up online while staying grounded in product categories, use cases, and supplier trust.',
       },
       {
         title: 'Product structuring and SEO',
         description:
-          'Product presentation and on-page SEO were treated as part of the core build so brand visibility could improve through search, not only through direct traffic.',
+          'Product presentation and on-page SEO were treated as part of the core build so customers could find sealants, adhesives, PU foams, aerosols, tools, and related construction chemicals more easily.',
       },
       {
         title: 'Cross-device optimisation',
@@ -383,7 +385,7 @@ export const projects: ProjectEntry[] = [
       {
         title: 'A more credible digital presence',
         description:
-          'The website gave the brand a cleaner and more reliable public presence, with products and content presented in a way that supports trust.',
+          'The website gave the brand a cleaner public presence, with product information structured for contractors, installers, maintenance teams, and B2B buyers.',
       },
       {
         title: 'Stronger search readiness',

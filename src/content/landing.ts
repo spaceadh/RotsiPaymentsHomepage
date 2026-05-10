@@ -12,30 +12,30 @@ export const trustLogos = ['BEWAMA', 'SOMAFIX KENYA', 'KUMBUSHA'];
 
 export const services = [
   {
-    icon: '⌘',
+    icon: 'software',
     title: 'Custom Software Development',
-    copy: 'Web, mobile and backend solutions built around your business process.',
+    copy: 'Web, mobile, and backend systems built around real business workflows.',
     href: '#contact',
   },
   {
-    icon: '⇄',
+    icon: 'automation',
     title: 'Automation & Integrations',
     copy: 'We connect your tools and automate workflows to save time and reduce errors.',
     href: '#contact',
   },
   {
-    icon: '◎',
+    icon: 'analytics',
     title: 'Data & Analytics Solutions',
-    copy: 'Turn raw data into clean dashboards and useful business insight.',
+    copy: 'Turn operational data into dashboards, reports, and useful business insight.',
     href: '#contact',
   },
   {
-    icon: '▣',
-    title: 'APIs & Fintech Infrastructure',
-    copy: 'Secure, reliable and scalable APIs for payments and operational systems.',
+    icon: 'commerce',
+    title: 'Ecommerce & CRM Platforms',
+    copy: 'Build customer, sales, inventory, booking, and checkout systems that teams can actually use.',
     href: '#contact',
   },
-];
+] as const;
 
 export const aboutStats = [
   { value: '25+', label: 'Projects Delivered' },

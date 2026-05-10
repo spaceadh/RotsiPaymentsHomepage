@@ -7,9 +7,9 @@ import ServicesSection from '../src/components/sections/ServicesSection';
 import TrustStrip from '../src/components/sections/TrustStrip';
 
 export const metadata: Metadata = {
-  title: 'Rotsi Labs | Systems, People, Impact',
+  title: 'Business Automation Systems, Custom Platforms & Workflow Infrastructure',
   description:
-    'Rotsi Labs is a product and systems studio building fintech solutions, automation tools, and digital products for Africa and the world.',
+    'Rotsi builds business automation systems, custom platforms, ecommerce workflows, CRM tools, and internal operations software for growing businesses.',
   alternates: { canonical: '/' },
 };
 

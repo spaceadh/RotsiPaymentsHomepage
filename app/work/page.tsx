@@ -7,9 +7,9 @@ import SectionHeader from '../../src/components/ui/SectionHeader';
 import { projects } from '../../src/content/projects';
 
 export const metadata: Metadata = {
-  title: 'Work | Real Systems, Platforms, And Workflow Case Studies',
+  title: 'Work | Custom Platform, Ecommerce, CRM And Automation Case Studies',
   description:
-    'Browse Rotsi case studies across B2B commerce, culture workflows, distributor websites, and internal operations platforms built around real business needs.',
+    'Browse Rotsi case studies across B2B ecommerce, CRM, workflow automation, SEO-ready websites, and internal operations platforms built around real business needs.',
   alternates: { canonical: '/work' },
 };
 
@@ -69,8 +69,8 @@ export default function WorkPage() {
                 Real projects built around <span className="text-accent">business workflows</span>.
               </h1>
               <p className="mt-7 max-w-3xl text-[17px] leading-relaxed text-muted">
-                These case studies show how Rotsi turns product direction, system logic, automation,
-                SEO, and internal operations into practical systems for real commercial use.
+                These case studies show how Rotsi turns product direction, system logic, CRM,
+                ecommerce, automation, SEO, and internal operations into practical systems for real commercial use.
               </p>
             </div>
 
@@ -88,7 +88,7 @@ export default function WorkPage() {
                   Focus
                 </span>
                 <p className="mt-4 text-2xl font-extrabold tracking-[-0.03em] text-text">
-                  Commerce, automation, SEO, internal tools
+                  Ecommerce, CRM, automation, SEO, internal tools
                 </p>
               </div>
               <div className="design-card min-h-0">
@@ -108,7 +108,7 @@ export default function WorkPage() {
             id="external-platforms"
             eyebrow="External platforms"
             title="Public systems built for growth, clarity, and search visibility."
-            copy="Bewama and Somafix Kenya show how public-facing platforms can connect brand, product structure, acquisition, and technical quality."
+            copy="Bewama and Somafix Kenya show how public-facing platforms can connect brand clarity, product structure, buying journeys, search visibility, and technical quality."
             items={externalProjects}
           />
         </div>

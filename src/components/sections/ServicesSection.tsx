@@ -9,8 +9,8 @@ export default function ServicesSection() {
       <Container>
         <SectionHeader
           eyebrow="What we do"
-          title="We design. We build. We ship."
-          copy="From idea to production, we help you build systems that scale and make an impact."
+          title="We build practical business systems."
+          copy="From CRM and ecommerce workflows to automations and internal platforms, we help teams turn scattered operations into usable software."
           className="mb-10"
         />
 

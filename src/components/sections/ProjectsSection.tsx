@@ -18,7 +18,7 @@ export default function ProjectsSection() {
             </h2>
           </div>
           <Link className="learn-link max-[560px]:mt-4 max-[560px]:inline-flex" href="/work">
-            View all projects →
+            View all projects -→
           </Link>
         </div>
 
