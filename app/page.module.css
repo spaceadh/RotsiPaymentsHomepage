@@ -48,7 +48,7 @@
 
 .hero {
   align-self: center;
-  padding: clamp(52px, 8vh, 112px) 0;
+  padding: clamp(36px, 6vh, 72px) 0;
 }
 
 .introduction {
@@ -74,7 +74,7 @@
 .title {
   max-width: 10ch;
   margin: 0;
-  font-size: clamp(4rem, 11.2vw, 10.5rem);
+  font-size: clamp(4rem, 10.4vw, 9.75rem);
   font-weight: 500;
   letter-spacing: -0.065em;
   line-height: 0.82;
@@ -82,8 +82,61 @@
   animation: enter 900ms 160ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+.thought {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35em;
+  min-height: 1.5em;
+  margin-top: clamp(30px, 4vh, 48px);
+  font-size: clamp(1rem, 1.45vw, 1.34rem);
+  letter-spacing: -0.025em;
+  animation: enter 700ms 260ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.thoughtLead {
+  flex: none;
+  margin: 0;
+  color: var(--quiet);
+}
+
+.rotator {
+  display: grid;
+  overflow: hidden;
+  height: 1.5em;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.rotator > span {
+  grid-area: 1 / 1;
+  opacity: 0;
+  transform: translateY(70%);
+  animation: rotateThought 12s infinite cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rotator > span:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.rotator > span:nth-child(3) {
+  animation-delay: 6s;
+}
+
+.rotator > span:nth-child(4) {
+  animation-delay: 9s;
+}
+
+.explanation {
+  max-width: 650px;
+  margin: clamp(14px, 2vh, 22px) 0 0;
+  color: var(--quiet);
+  font-size: clamp(0.82rem, 1vw, 0.96rem);
+  line-height: 1.6;
+  animation: enter 700ms 340ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 .footer {
-  animation: enter 700ms 300ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: enter 700ms 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .rule {
@@ -95,17 +148,24 @@
 }
 
 .footerContent {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(250px, 0.65fr);
+  gap: clamp(40px, 8vw, 120px);
   padding-top: clamp(18px, 2.2vw, 30px);
 }
 
+.footerPath {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+
 .prompt {
+  max-width: 660px;
   margin: 0;
   color: var(--quiet);
   font-size: clamp(0.82rem, 1vw, 0.98rem);
+  line-height: 1.5;
 }
 
 .prompt span {
@@ -113,9 +173,10 @@
   font-weight: 650;
 }
 
-.malaikaLink {
+.textLink {
   display: inline-flex;
   align-items: center;
+  justify-self: start;
   gap: 20px;
   border-bottom: 1px solid var(--ink);
   padding: 0 0 7px;
@@ -132,16 +193,26 @@
   transition: transform 180ms ease;
 }
 
-.malaikaLink:hover,
-.malaikaLink:focus-visible {
+.textLink:hover,
+.textLink:focus-visible {
   border-color: var(--malaika);
   color: var(--malaika);
   outline: none;
 }
 
-.malaikaLink:hover .arrow,
-.malaikaLink:focus-visible .arrow {
+.textLink:hover .arrow,
+.textLink:focus-visible .arrow {
   transform: translate(3px, -3px);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
 }
 
 @keyframes enter {
@@ -153,6 +224,25 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes rotateThought {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+
+  6%,
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  25%,
+  100% {
+    opacity: 0;
+    transform: translateY(-70%);
   }
 }
 
@@ -179,27 +269,41 @@
 
   .hero {
     align-self: center;
-    padding: 54px 0;
+    padding: 34px 0;
   }
 
   .title {
-    font-size: clamp(3.8rem, 20vw, 6rem);
+    font-size: clamp(3.5rem, 18vw, 5.2rem);
     line-height: 0.86;
   }
 
-  .footerContent {
+  .thought {
     align-items: flex-start;
     flex-direction: column;
-    gap: 18px;
+    gap: 0;
+    margin-top: 28px;
+  }
+
+  .explanation {
+    max-width: 34rem;
+    margin-top: 12px;
+    line-height: 1.5;
+  }
+
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .prompt {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+    max-width: 100%;
   }
 
-  .malaikaLink {
+  .footerPath {
+    gap: 6px;
+  }
+
+  .textLink {
     width: 100%;
     justify-content: space-between;
   }
@@ -209,12 +313,25 @@
   .header,
   .introduction,
   .title,
+  .thought,
+  .explanation,
   .footer,
   .rule {
     animation: none;
   }
 
-  .malaikaLink,
+  .rotator > span {
+    display: none;
+    animation: none;
+  }
+
+  .rotator > span:first-child {
+    display: block;
+    opacity: 1;
+    transform: none;
+  }
+
+  .textLink,
   .arrow {
     transition: none;
   }
