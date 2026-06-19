@@ -5,23 +5,23 @@ import { SITE_NAME, SITE_URL, organizationJsonLd, websiteJsonLd } from '../src/l
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} | Business Automation Systems, Custom Platforms & Workflow Infrastructure`,
+    default: `${SITE_NAME} — Rethinking Technology`,
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    'Rotsi builds business automation systems, custom platforms, ecommerce workflows, CRM tools, and internal operations software for growing businesses.',
+    'Rotsi rethinks technology for modern businesses. Explore our creative arm, Malaika Studios.',
   openGraph: {
     type: 'website',
     url: SITE_URL,
-    title: `${SITE_NAME} | Business Automation Systems, Custom Platforms & Workflow Infrastructure`,
+    title: `${SITE_NAME} — Rethinking Technology`,
     description:
-      'Rotsi builds practical software systems for ecommerce, CRM, workflow automation, internal operations, and business growth.',
+      'Rotsi rethinks technology for modern businesses. Explore our creative arm, Malaika Studios.',
   },
   twitter: {
-    card: 'summary_large_image',
-    title: `${SITE_NAME} | Business Automation Systems, Custom Platforms & Workflow Infrastructure`,
+    card: 'summary',
+    title: `${SITE_NAME} — Rethinking Technology`,
     description:
-      'Rotsi builds practical software systems for ecommerce, CRM, workflow automation, internal operations, and business growth.',
+      'Rotsi rethinks technology for modern businesses. Explore our creative arm, Malaika Studios.',
   },
 };
 

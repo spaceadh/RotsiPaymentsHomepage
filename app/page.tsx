@@ -1,33 +1,56 @@
 import type { Metadata } from 'next';
-import SiteFooter from '../src/components/layout/SiteFooter';
-import SiteHeader from '../src/components/layout/SiteHeader';
-import HeroSection from '../src/components/sections/HeroSection';
-import LabsSection from '../src/components/sections/LabsSection';
-import ProjectsSection from '../src/components/sections/ProjectsSection';
-import ServicesSection from '../src/components/sections/ServicesSection';
-import TrustStrip from '../src/components/sections/TrustStrip';
-import AboutSection from '../src/components/sections/AboutSection';
+import RotsiLogo from '../src/components/brand/RotsiLogo';
+import styles from './page.module.css';
 
 export const metadata: Metadata = {
-  title: 'Business Automation Systems, Custom Platforms & Workflow Infrastructure',
+  title: 'Rotsi — Rethinking Technology',
   description:
-    'Rotsi builds business automation systems, custom platforms, ecommerce workflows, CRM tools, and internal operations software for growing businesses.',
+    'Rotsi rethinks technology for modern businesses. Explore our creative arm, Malaika Studios.',
   alternates: { canonical: '/' },
 };
 
 export default function HomePage() {
   return (
-    <>
-      <SiteHeader />
-      <main>
-        <HeroSection />
-        <TrustStrip />
-        <ServicesSection />
-        <ProjectsSection />
-        <AboutSection />
-        <LabsSection />
-      </main>
-      <SiteFooter />
-    </>
+    <main className={styles.page}>
+      <header className={styles.header}>
+        <a className={styles.logo} href="/" aria-label="Rotsi home">
+          <RotsiLogo className={styles.wordmark} kind="wordmark" title="Rotsi" />
+        </a>
+
+        <span className={styles.location}>Nairobi, Kenya</span>
+      </header>
+
+      <section className={styles.hero} aria-labelledby="home-heading">
+        <p className={styles.introduction}>Hi, we are Rotsi.</p>
+        <h1 id="home-heading" className={styles.title}>
+          Rethinking
+          <br />
+          technology.
+        </h1>
+      </section>
+
+      <footer className={styles.footer}>
+        <div className={styles.rule} aria-hidden="true" />
+
+        <div className={styles.footerContent}>
+          <p className={styles.prompt}>
+            Looking for our creative arm?
+            <span> Meet Malaika Studios.</span>
+          </p>
+
+          <a
+            className={styles.malaikaLink}
+            href="https://malaikastudios.rotsi.co.ke"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>Visit Malaika Studios</span>
+            <span className={styles.arrow} aria-hidden="true">
+              ↗
+            </span>
+          </a>
+        </div>
+      </footer>
+    </main>
   );
 }
